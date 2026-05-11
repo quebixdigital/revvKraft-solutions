@@ -76,10 +76,11 @@
     });
 
     // sticky header
-    window.addEventListener("scroll", function() {
-        const header = document.querySelector("header.header-area");
-        if (header) {
-            header.classList.toggle("sticky", window.scrollY > 0);
+    $(window).on("scroll", function() {
+        if ($(window).scrollTop() > 0) {
+            $(".header-area").addClass("sticky");
+        } else {
+            $(".header-area").removeClass("sticky");
         }
     });
 
@@ -1215,7 +1216,7 @@
                     x: ((relX - boundingRect.width / 2) / boundingRect.width) * movement,
                     y:
                         ((relY - boundingRect.height / 2) / boundingRect.height) * movement,
-                    ease: Power2.easeOut,
+                    ease: "power2.out",
                 });
             }
 
@@ -1902,7 +1903,10 @@
                     start: "top 85%",
                 };
             }
-            gsap.from(item, tp_anim_setting);
+            gsap.from(item, {
+                ...tp_anim_setting,
+                force3D: true
+            });
         });
     }
 
