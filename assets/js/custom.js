@@ -2428,7 +2428,7 @@
             });
             t.to(textEl, {
                 scrambleText: {
-                    chars: "ANIOAGENCYEGENSLAB",
+                    chars: "REVVKRAFTGROWTH",
                     text: "{original}",
                     speed: 0.5,
                     delimiter: "",
