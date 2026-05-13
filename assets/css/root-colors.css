@@ -1,0 +1,38 @@
+/* 
+  RevvKraft Solutions - Master Color Palette
+  Standardized Variable System
+*/
+
+:root {
+  /* Core Brand Colors */
+  --primary-color: #C2EE10;
+  --primary-rgb: 194, 238, 16;
+  
+  --secondary-color: #0a0a0a;
+  --secondary-rgb: 10, 10, 10;
+  
+  --accent-color: #C2EE10;
+  --accent-rgb: 194, 238, 16;
+
+  /* UI Colors (Standardized for the Dark Theme used in index.html) */
+  --background-color: #141414;
+  --background-rgb: 20, 20, 20;
+
+  --title-color: #ffffff;
+  --title-rgb: 255, 255, 255;
+
+  --text-color: #999999;
+  --text-rgb: 153, 153, 153;
+
+  --border-color: #2F2F2F;
+  --border-rgb: 47, 47, 47;
+
+  --white: #ffffff;
+  --white-rgb: 255, 255, 255;
+
+  --black: #020202;
+  --black-rgb: 2, 2, 2;
+
+  --surface-color: #1E1E1E;
+  --surface-rgb: 30, 30, 30;
+}

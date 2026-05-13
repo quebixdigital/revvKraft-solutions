@@ -238,35 +238,34 @@ Version: 1.0
     --font-felidae: "Felidae", sans-serif;
     --font-tartuffo-Trial: "Tartuffo", sans-serif;
     --font-kanit: "Kanit", sans-serif;
-    --white-color: #fff;
-    --white-color-opc: 255, 255, 255;
+    --white-color: var(--white);
+    --white-color-opc: var(--white-rgb);
     --dark-white-color: #fff;
     --dark-black-color: #020202;
-    --black-color: #020202;
-    --black-color-opc: 2, 2, 2;
+    --black-color: var(--black);
+    --black-color-opc: var(--black-rgb);
     --dark-title-color: #020202;
-    --title-color: #020202;
-    --title-color-opc: 2, 2, 2;
+    --title-color: var(--black);
+    --title-color-opc: var(--black-rgb);
     --dark-text-color: #999999;
     --text-color: #404040;
     --global-text-color: #404040;
     --text-color-opc: 64, 64, 64;
-    --primary-color1: #C2EE10;
-    --primary-color1-opc: 194, 238, 16;
+    --primary-color1: var(--primary-color);
+    --primary-color1-opc: var(--primary-rgb);
     --borders-color: #E8E8E8;
     --borders-color-opc: 232, 232, 232;
 }
 
 body.dark {
-    --dark-white-color: #020202;
-    --black-color: #fff;
-    --black-color-opc: 255, 255, 255;
-    --title-color: #fff;
-    --title-color-opc: 255, 255, 255;
-    --text-color: #999999;
-    --borders-color: #2F2F2F;
-    --borders-color-opc: 47, 47, 47;
-    background-color: #141414;
+    --black-color: var(--white);
+    --black-color-opc: var(--white-rgb);
+    --title-color: var(--white);
+    --title-color-opc: var(--white-rgb);
+    --text-color: var(--text-color);
+    --borders-color: var(--border-color);
+    --borders-color-opc: var(--border-rgb);
+    background-color: var(--background-color);
 }
 
 /*================================================
@@ -4903,8 +4902,8 @@ header.style-2.two {
 }
 
 .home1-banner-section .banner-content-wrap .banner-content .btn-and-rating-area .rating-area .content .star li i {
-    font-size: 12px;
-    color: #E62415;
+    font-size: 14px;
+    color: #FFD700;
 }
 
 .home1-banner-section .banner-content-wrap .banner-content .btn-and-rating-area .rating-area .content span {
@@ -41518,7 +41517,7 @@ body.dark .primary-btn5.transparent {
 }
 
 body.dark .primary-btn5.transparent span {
-    background: #141414;
+    background: var(--background-color);
     border-radius: 100px;
     padding: 22px 37px;
 }
@@ -41532,12 +41531,12 @@ body.dark .primary-btn5.transparent:hover .btn-text {
 }
 
 body.dark .circle-btn.two {
-    background-color: #020202;
-    border-color: #020202;
+    background-color: var(--black);
+    border-color: var(--black);
 }
 
 body.dark .breadcrumb-section .breadcrumb-content span {
-    background-color: #1E1E1E;
+    background-color: var(--surface-color);
 }
 
 body.dark header.style-2 .company-logo .light {
@@ -41575,11 +41574,11 @@ body.dark header.style-2 .mobile-logo-area .mobile-logo-wrap .dark {
 }
 
 body.dark blockquote {
-    background-color: #1E1E1E;
+    background-color: var(--surface-color);
 }
 
 body.dark .home1-banner-section {
-    background-color: #1E1E1E;
+    background-color: var(--surface-color);
 }
 
 body.dark .home1-banner-section .shape {
@@ -41599,11 +41598,11 @@ body.dark .home1-call-section .call-wrapper {
 }
 
 body.dark .home1-service-section {
-    background-color: #020202;
+    background-color: var(--black);
 }
 
 body.dark .home1-service-section .service-list .single-service {
-    background-color: #141414;
+    background-color: var(--background-color);
 }
 
 body.dark .testimonial-card {
@@ -41611,7 +41610,7 @@ body.dark .testimonial-card {
 }
 
 body.dark .slider-btn-grp .slider-btn {
-    background-color: #020202;
+    background-color: var(--black);
 }
 
 body.dark .slider-btn-grp .slider-btn:hover {
@@ -41661,7 +41660,7 @@ body.dark .home2-testimonial-section {
 }
 
 body.dark .home2-award-section .award-table tbody tr:hover {
-    background-color: #020202;
+    background-color: var(--black);
 }
 
 body.dark .home3-banner-section .banner-wrapper .banner-rating-and-info-area .rating-area {
@@ -41673,7 +41672,7 @@ body.dark .home3-banner-section .banner-wrapper .banner-rating-and-info-area .ra
 }
 
 body.dark .home5-service-section .service-card2::before {
-    background: linear-gradient(180deg, #141414 80.17%, #C2EE10 100%);
+    background: linear-gradient(180deg, var(--background-color) 80.17%, var(--primary-color) 100%);
 }
 
 body.dark .home5-portfolio-section .single-portfolio .portfolio-content-wrap .content ul li a {
@@ -42002,7 +42001,7 @@ body.dark .about2-page-banner-section .banner-wrapper .banner-content .rating-an
 }
 
 body.dark .about2-page-process-section .bottom-area {
-    background-color: #1E1E1E;
+    background-color: var(--surface-color);
 }
 
 body.dark .service2-why-choose-section .why-choose-wrapper .why-choose-img-wrap .video-area {
@@ -42402,5 +42401,130 @@ body.sidebar-open {
     top: 30px;
     right: 30px;
   }
+}
+
+
+/*=====================================
+  Hero Banner Heading Fix
+========================================*/
+.home1-banner-section h1,
+.home1-banner-section h1 span,
+.home1-banner-section h1 * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.banner-video-wrap {
+  color: #ffffff !important;
+}
+
+.banner-video {
+  width: 120px;
+  height: 54px;
+  border-radius: 40px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin: 0 8px;
+}
+
+.banner-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .banner-video {
+    width: 90px;
+    height: 42px;
+    margin: 0 5px;
+  }
+}
+
+.home1-banner-section .banner-content-wrap .banner-content p {
+  color: #ffffff !important;
+}
+
+
+/*=====================================
+  Hero CTA Button Perfection
+========================================*/
+.hero-cta {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.hero-cta i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(194, 238, 16, 0.2);
+  border-color: var(--primary-color);
+}
+
+.hero-cta:hover i {
+  transform: translateX(5px);
+}
+
+.hero-cta span {
+  font-weight: 600 !important;
+  letter-spacing: 0.5px;
+}
+
+/* Enhancing the sliding text effect */
+.hero-cta span:nth-child(2) {
+  color: var(--black) !important; /* Ensure it's readable on the lime background hover */
+}
+
+
+/*=====================================
+  Global Star Rating Perfection
+========================================*/
+.star li i {
+  color: #FFD700 !important;
+  font-size: 14px !important;
+}
+
+
+/*=====================================
+  Perfect Button Hover Effects
+========================================*/
+.primary-btn1 {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease !important;
+}
+
+.primary-btn1:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(194, 238, 16, 0.2);
+}
+
+.primary-btn1.black-bg:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/*=====================================
+  Perfect Button Hover State
+========================================*/
+.primary-btn1:hover::after {
+  background-color: #000000 !important;
+}
+
+.primary-btn1:hover span {
+  color: #ffffff !important;
+}
+
+.primary-btn1:hover {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 20px rgba(194, 238, 16, 0.3) !important;
 }
 
