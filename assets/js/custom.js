@@ -118,54 +118,7 @@
             card.style.height = maxHeight + "px";
         });
     }
-    // Home1 Testimonial Slider
-    var swiper = new Swiper(".home1-testimonial-slider", {
-        slidesPerView: 1,
-        speed: 1500,
-        spaceBetween: 24,
-        autoplay: {
-            delay: 2500, // Autoplay duration in milliseconds
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: ".testimonial-slider-next",
-            prevEl: ".testimonial-slider-prev",
-        },
-        breakpoints: {
-            280: {
-                slidesPerView: 1,
-            },
-            386: {
-                slidesPerView: 1,
-            },
-            576: {
-                slidesPerView: 1,
-                spaceBetween: 15,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 15,
-            },
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 15,
-            },
-            1200: {
-                slidesPerView: 3,
-            },
-            1400: {
-                slidesPerView: 3,
-            },
-        },
-        on: {
-            init: function() {
-                equalizeTestimonials();
-            },
-            resize: function() {
-                equalizeTestimonials();
-            },
-        },
-    });
+
     // Home2 Testimonial Slider
     var swiper = new Swiper(".home2-testimonial-slider", {
         slidesPerView: 1,
