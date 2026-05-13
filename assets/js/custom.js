@@ -2122,17 +2122,7 @@
     const timelinesNormal = [];
     const timelinesReverse = [];
 
-    // Normal sections
-    document.querySelectorAll(".scroll-text-section").forEach((section) => {
-        const groups = section.querySelectorAll(".scrolling-text .marquee__group");
-        if (groups.length) {
-            const tl = horizontalLoop(groups, {
-                repeat: -1,
-                paddingRight: 30,
-            });
-            timelinesNormal.push(tl);
-        }
-    });
+
 
     // Reverse sections
     document.querySelectorAll(".scroll-text-section2").forEach((section) => {
