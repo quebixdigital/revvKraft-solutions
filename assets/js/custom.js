@@ -2867,33 +2867,6 @@
         });
     });
 
-    //Horizontal Scroll
-    const service = gsap.matchMedia();
-
-    service.add("(min-width: 992px)", () => {
-        const section = document.querySelector(".service-page-process-section");
-        const wrapper = document.querySelector(".service-page-process-wrapper");
-
-        if (!section || !wrapper) return;
-
-        const getScrollAmount = () => {
-            return -(wrapper.scrollWidth - window.innerWidth);
-        };
-
-        gsap.to(wrapper, {
-            x: getScrollAmount,
-            ease: "none",
-            scrollTrigger: {
-                trigger: section,
-                start: "top 85px",
-                end: () => `+=${wrapper.scrollWidth - window.innerWidth}`,
-                scrub: 1,
-                pin: true,
-                invalidateOnRefresh: true,
-            },
-        });
-    });
-
 
     // Service Page3 Why Choose Section Animation
     function initHowWeDeliverAnimation() {
