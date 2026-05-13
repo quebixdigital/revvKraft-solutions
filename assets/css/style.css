@@ -43571,3 +43571,75 @@ body.sidebar-open {
     display: flex;
     align-items: flex-start;
 }
+
+/* Service List Bullets Improvement */
+.service-list ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 35px 0 !important;
+}
+
+.service-list ul li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.service-list ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color, #C2EE10);
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 0 rgba(194, 238, 16, 0);
+}
+
+.service-list ul li.active::before {
+    transform: scale(1.4);
+    box-shadow: 0 0 15px var(--primary-color, #C2EE10);
+}
+
+.service-list ul li h2 {
+    margin: 0;
+    line-height: 1.1;
+}
+
+.service-list ul li h2 a {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--title-color, #ffffff);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.service-list ul li:hover h2 a,
+.service-list ul li.active h2 a {
+    color: var(--primary-color, #C2EE10);
+    transform: translateX(5px);
+}
+
+@media (max-width: 991px) {
+    .service-list ul li h2 a {
+        font-size: 24px;
+    }
+    .service-list ul li::before {
+        top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-list ul li h2 a {
+        font-size: 20px;
+    }
+    .service-list ul li::before {
+        top: 8px;
+        width: 8px;
+        height: 8px;
+    }
+}
