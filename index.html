@@ -50,47 +50,17 @@
     </div>
 
     <!-- Sidebar Menu -->
-    <div class="right-sidebar-menu">
-        <div class="right-sidebar-close-btn">
+    <div class="right-sidebar-overlay"></div>
+    <div class="right-sidebar" aria-hidden="true">
+        <button class="right-sidebar-close" type="button" aria-label="Close sidebar">
             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M14.6694 3.0106C14.8839 2.78848 15.0026 2.49099 15 2.18219C14.9973 1.8734 14.8734 1.57801 14.6551 1.35966C14.4367 1.1413 14.1413 1.01744 13.8325 1.01475C13.5237 1.01207 13.2262 1.13078 13.0041 1.34531L8.00706 6.34236L3.01119 1.34531C2.90184 1.23589 2.77202 1.14907 2.62912 1.08983C2.48623 1.03058 2.33306 1.00005 2.17837 1C2.02368 0.999945 1.87049 1.03036 1.72756 1.08951C1.58462 1.14865 1.45473 1.23538 1.34531 1.34472C1.23589 1.45407 1.14907 1.58389 1.08983 1.72679C1.03058 1.86968 1.00005 2.02285 1 2.17754C0.999945 2.33223 1.03036 2.48542 1.08951 2.62835C1.14865 2.77129 1.23538 2.90118 1.34472 3.0106L6.34177 8.00765L1.34472 13.0047C1.12389 13.2257 0.99989 13.5253 1 13.8378C1.00011 14.1502 1.12432 14.4497 1.34531 14.6706C1.5663 14.8914 1.86596 15.0154 2.17837 15.0153C2.49078 15.0152 2.79036 14.891 3.01119 14.67L8.00706 9.67294L13.0041 14.67C13.2262 14.8845 13.5237 15.0032 13.8325 15.0005C14.1413 14.9979 14.4367 14.874 14.6551 14.6556C14.8734 14.4373 14.9973 14.1419 15 13.8331C15.0026 13.5243 14.8839 13.2268 14.6694 13.0047L9.67235 8.00765L14.6694 3.0106Z" />
             </svg>
-        </div>
-        <div class="sidebar-content-wrap">
+        </button>
+        <div class="right-sidebar-content">
             <div class="main-menu">
                 <ul class="menu-list">
-                    <li class="menu-item-has-children active">
-                        <a class="portfolio-drop-down">Home</a>
-                        <i class="bi-caret-down-fill dropdown-icon"></i>
-                        <ul class="sub-menu">
-                            <li>
-                                <a class="portfolio-drop-down">Light Version</a>
-                                <i class="bi-caret-down-fill dropdown-icon"></i>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Startup Agency</a></li>
-                                    <li><a href="creative-agency.html">Creative Agency</a></li>
-                                    <li><a href="design-agency.html">Design Agency</a></li>
-                                    <li><a href="creative-studio.html">Creative Studio</a></li>
-                                    <li><a href="ai-agency.html">AI Agency</a></li>
-                                    <li><a href="modern-agency.html">Modern Agency</a></li>
-                                    <li><a href="digital-agency.html">Digital Agency</a></li>
-                                    <li><a href="agency-portfolio.html">Agency Portfolio</a></li>
-                                    <li><a href="personal-portfolio.html">Personal Portfolio</a></li>
-                                </ul>
-                            </li>
-                            <li class="active">
-                                <a class="portfolio-drop-down">Dark Version</a>
-                                <i class="bi-caret-down-fill dropdown-icon"></i>
-                                <ul class="sub-menu">
-                                    <li class="active"><a href="startup-agency-dark.html">Startup Agency</a></li>
-                                    <li><a href="creative-agency-dark.html">Creative Agency</a></li>
-                                    <li><a href="design-agency-dark.html">Design Agency</a></li>
-                                    <li><a href="creative-studio-dark.html">Creative Studio</a></li>
-                                    <li><a href="ai-agency-dark.html">AI Agency</a></li>
-                                    <li><a href="modern-agency-dark.html">Modern Agency</a></li>
-                                    <li><a href="digital-agency-dark.html">Digital Agency</a></li>
-                                    <li><a href="agency-portfolio-dark.html">Agency Portfolio</a></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li class="menu-item-has-children">
@@ -139,6 +109,7 @@
 
     <div id="smooth-wrapper">
         <div id="smooth-content">
+
             <!-- header Section Start-->
             <header class="header-area style-1">
                 <div class="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
@@ -165,7 +136,7 @@
                                 Let’s Talk
                             </span>
                         </a>
-                        <div class="right-sidebar-button">
+                        <div class="right-sidebar-button" role="button" tabindex="0" aria-label="Open sidebar menu">
                             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                 <g>
                                     <path
@@ -177,6 +148,7 @@
                 </div>
             </header>
             <!-- header Section End-->
+             
             <!-- home1 Banner Section Start -->
             <div class="home1-banner-section">
                 <div class="container-fluid p-0">
@@ -1139,6 +1111,86 @@
     <script src="assets/js/theme_switcher_to_dark.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/custom.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const openBtn = document.querySelector(".right-sidebar-button");
+      const sidebar = document.querySelector(".right-sidebar");
+      const overlay = document.querySelector(".right-sidebar-overlay");
+      const closeBtn = document.querySelector(".right-sidebar-close");
+
+      if (!openBtn) {
+        console.error("Sidebar trigger .right-sidebar-button not found");
+        return;
+      }
+
+      if (!sidebar || !overlay || !closeBtn) {
+        console.error("Sidebar, overlay, or close button missing");
+        return;
+      }
+
+      function openSidebar(event) {
+        if (event) event.preventDefault();
+
+        sidebar.classList.add("active");
+        overlay.classList.add("active");
+        document.body.classList.add("sidebar-open");
+
+        sidebar.setAttribute("aria-hidden", "false");
+      }
+
+      function closeSidebar(event) {
+        if (event) event.preventDefault();
+
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("sidebar-open");
+
+        sidebar.setAttribute("aria-hidden", "true");
+      }
+
+      openBtn.addEventListener("click", openSidebar);
+
+      openBtn.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          openSidebar(event);
+        }
+      });
+
+      closeBtn.addEventListener("click", closeSidebar);
+      overlay.addEventListener("click", closeSidebar);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeSidebar(event);
+        }
+      });
+
+      // Submenu Toggle
+      const menuItemsWithChildren = document.querySelectorAll('.right-sidebar .menu-item-has-children');
+      menuItemsWithChildren.forEach(item => {
+        const link = item.querySelector('a');
+        const icon = item.querySelector('.dropdown-icon');
+        const subMenu = item.querySelector('.sub-menu');
+
+        if (subMenu) {
+          subMenu.style.display = 'none'; // Initial state
+          
+          const toggle = (e) => {
+            e.preventDefault();
+            const isOpen = subMenu.style.display === 'block';
+            subMenu.style.display = isOpen ? 'none' : 'block';
+            if (icon) {
+              icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+          };
+
+          if (icon) icon.addEventListener('click', toggle);
+          // Optional: link.addEventListener('click', toggle); 
+        }
+      });
+    });
+    </script>
 
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"

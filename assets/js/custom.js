@@ -34,13 +34,7 @@
         $(".main-menu").removeClass("show-menu");
     });
 
-    // sidebar
-    $(".right-sidebar-button").on("click", function() {
-        $(".right-sidebar-menu").addClass("show-right-menu");
-    });
-    $(".right-sidebar-close-btn").on("click", function() {
-        $(".right-sidebar-menu").removeClass("show-right-menu");
-    });
+
 
     jQuery(".dropdown-icon").on("click", function() {
         jQuery(this)
