@@ -119,29 +119,7 @@
         });
     }
 
-    // Home2 Testimonial Slider
-    var swiper = new Swiper(".home2-testimonial-slider", {
-        slidesPerView: 1,
-        speed: 1500,
-        spaceBetween: 24,
-        autoplay: {
-            delay: 2500, // Autoplay duration in milliseconds
-            disableOnInteraction: false,
-        },
-        autoHeight: true,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true,
-        },
-        pagination: {
-            el: ".swiper-pagination1",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".testimonial-slider-next",
-            prevEl: ".testimonial-slider-prev",
-        },
-    });
+
     // Home5 Banner Bottom Slider
     var swiper = new Swiper(".home5-banner-bottom-slider", {
         slidesPerView: 1,

@@ -357,14 +357,6 @@
                     <div class="service-wrapper service-pp-pin">
                         <div class="video-area fade_anim" data-delay=".3" data-fade-from="left">
                             <img src="assets/images/gallery/home3-service-video-img.png" alt="Service Video Preview" loading="lazy">
-                            <a href="assets/video/home1-banner-video.mp4" class="play-btn" data-fancybox="video-player">
-                                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="M13.2627 7C13.2643 7.26562 13.1952 7.52687 13.0624 7.7569C12.9296 7.98694 12.7379 8.17746 12.5071 8.30889L3.00437 13.7953C2.77511 13.9293 2.5143 14 2.2487 14C1.98311 14 1.72229 13.9293 1.49303 13.7953C1.26221 13.6638 1.07055 13.4733 0.937743 13.2432C0.804932 13.0132 0.735759 12.752 0.737331 12.4864V1.51364C0.735766 1.24803 0.804938 0.986786 0.937743 0.756752C1.07055 0.526717 1.2622 0.336184 1.493 0.204724C1.72228 0.0706577 1.98309 0 2.24869 0C2.51428 0 2.7751 0.0706577 3.00437 0.204724L12.5071 5.69111C12.7379 5.82255 12.9295 6.01307 13.0624 6.2431C13.1952 6.47314 13.2643 6.73439 13.2627 7Z"/>
-                                    </g>
-                                </svg>
-                            </a>
                         </div>
                         <div class="service-list">
                             <div class="single-service servicePanel">
@@ -554,7 +546,7 @@
                                                     <img src="assets/images/gallery/testimonial-author-img2.png" alt="Jason Lee" loading="lazy">
                                                 </div>
                                                 <div class="author-content">
-                                                    <h2>@2026 RevvKraft Solutions</h2>
+                                                    <h3>Jason Lee</h3>
                                                     <span>Co-Founder of OrbitFlow</span>
                                                 </div>
                                             </div>
@@ -1029,6 +1021,48 @@
 
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"70834e4b23964a2eaf7cf4ec0e5e9a84","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
         crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof Swiper === "undefined") {
+    console.error("Swiper JS is not loaded for about testimonial slider.");
+    return;
+  }
+
+  const sliderEl = document.querySelector(".home3-testimonial-section .home2-testimonial-slider");
+
+  if (!sliderEl) {
+    console.warn("About testimonial slider not found.");
+    return;
+  }
+
+  if (sliderEl.classList.contains("swiper-initialized")) {
+    console.warn("About testimonial slider already initialized.");
+    return;
+  }
+
+  new Swiper(".home3-testimonial-section .home2-testimonial-slider", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    speed: 850,
+    loop: true,
+    grabCursor: true,
+    watchOverflow: true,
+    autoHeight: false,
+    autoplay: {
+      delay: 3800,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+    navigation: {
+      nextEl: ".home3-testimonial-section .testimonial-slider-next",
+      prevEl: ".home3-testimonial-section .testimonial-slider-prev"
+    },
+    keyboard: {
+      enabled: true
+    }
+  });
+});
+</script>
 </body>
 
 </html>
