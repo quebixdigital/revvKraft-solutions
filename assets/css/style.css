@@ -42656,7 +42656,7 @@ body.sidebar-open {
   height: 48px;
   border-radius: 50%;
   background: var(--primary-color, #C2EE10);
-  color: #000000;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42673,6 +42673,7 @@ body.sidebar-open {
 .home1-testimonial-section .slider-btn:hover {
   transform: translateY(-3px);
   background: #ffffff;
+  color: #000000;
 }
 
 .home1-testimonial-section .slider-btn.swiper-button-disabled {
@@ -42964,4 +42965,60 @@ body.sidebar-open {
     width: 48px;
     height: 48px;
   }
+}
+
+/* Portfolio Card Hover Fix */
+.home1-portfolio-section .portfolio-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.home1-portfolio-section .portfolio-card:hover {
+  transform: translateY(-6px);
+}
+
+.home1-portfolio-section .portfolio-img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.home1-portfolio-section .portfolio-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+  transition: transform 0.65s ease, filter 0.35s ease;
+  will-change: transform;
+}
+
+.home1-portfolio-section .portfolio-card:hover .portfolio-img img {
+  transform: scale(1.06);
+  filter: brightness(0.88) contrast(1.04);
+}
+
+.home1-portfolio-section .portfolio-content {
+  position: relative;
+  z-index: 2;
+}
+
+.home1-portfolio-section .portfolio-content h3 a,
+.home1-portfolio-section .portfolio-content ul li a {
+  transition: color 0.3s ease;
+}
+
+.home1-portfolio-section .portfolio-card:hover .portfolio-content h3 a {
+  color: var(--primary-color);
+}
+
+/* Cursor Conflict Fix */
+.custom-cursor,
+.cursor,
+.cursor-wrap,
+.cursor-text,
+#magic-cursor,
+#ball {
+  pointer-events: none !important;
 }
