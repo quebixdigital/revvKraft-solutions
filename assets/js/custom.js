@@ -97,25 +97,39 @@
     });
 
     function equalizeTestimonials() {
-        let cards = document.querySelectorAll(
-            ".home1-testimonial-section .testimonial-card, .home6-testimonial-section .testimonial-card3, .home7-testimonial-section .testimonial-card, .home9-testimonial-section .testimonial-card"
-        );
-        let maxHeight = 0;
+        const sections = [
+            ".home1-testimonial-section",
+            ".home6-testimonial-section",
+            ".home7-testimonial-section",
+            ".home9-testimonial-section"
+        ];
 
-        // Reset heights first
-        cards.forEach((card) => {
-            card.style.height = "auto";
-        });
+        sections.forEach((sectionSelector) => {
+            let cardSelector = sectionSelector + " .testimonial-card";
+            if (sectionSelector === ".home6-testimonial-section") {
+                cardSelector = sectionSelector + " .testimonial-card3";
+            }
 
-        // Find tallest card
-        cards.forEach((card) => {
-            let h = card.offsetHeight;
-            if (h > maxHeight) maxHeight = h;
-        });
+            let cards = document.querySelectorAll(cardSelector);
+            let maxHeight = 0;
 
-        // Apply tallest height to all
-        cards.forEach((card) => {
-            card.style.height = maxHeight + "px";
+            // Reset heights first
+            cards.forEach((card) => {
+                card.style.height = "auto";
+            });
+
+            // Find tallest card in THIS section
+            cards.forEach((card) => {
+                let h = card.offsetHeight;
+                if (h > maxHeight) maxHeight = h;
+            });
+
+            // Apply tallest height to all in THIS section
+            cards.forEach((card) => {
+                if (maxHeight > 0) {
+                    card.style.height = maxHeight + "px";
+                }
+            });
         });
     }
 

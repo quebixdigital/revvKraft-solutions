@@ -30,6 +30,40 @@
     <!-- Title -->
     <title>RevvKraft Solutions - Sales Systems & Digital Growth</title>
     <link rel="icon" href="assets/images/logos/fav-icon.svg" type="image/gif" sizes="20x20">
+    <style>
+        .home1-testimonial-section .testimonial-card {
+            min-height: 0 !important;
+            height: auto !important;
+            padding: 24px 22px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 15px !important;
+            justify-content: flex-start !important;
+        }
+        .home1-testimonial-section .testimonial-content p {
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+            margin-bottom: 0 !important;
+        }
+        .home1-testimonial-section .logo-and-author-area {
+            margin-top: 15px !important;
+            padding-top: 12px !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        .home1-testimonial-section .testimonial-content svg {
+            margin-bottom: 12px !important;
+            width: 32px !important;
+            height: 32px !important;
+        }
+        .home1-testimonial-slider .swiper-slide {
+            height: auto !important;
+            display: flex !important;
+            align-items: flex-start !important;
+        }
+        .home1-testimonial-slider .swiper-wrapper {
+            align-items: flex-start !important;
+        }
+    </style>
 </head>
 
 <body class="tt-magic-cursor dark">
@@ -767,6 +801,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
                                     <div class="testimonial-card">
                                         <div class="testimonial-content">
@@ -799,6 +834,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
                                     <div class="testimonial-card">
                                         <div class="testimonial-content">
@@ -831,6 +867,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -1189,6 +1226,7 @@
                 grabCursor: true,
                 watchOverflow: true,
                 centeredSlides: false,
+                autoHeight: true,
                 autoplay: {
                     delay: 3500,
                     disableOnInteraction: false,
