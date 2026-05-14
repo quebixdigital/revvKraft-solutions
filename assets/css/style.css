@@ -12793,9 +12793,6 @@ header.style-2.two {
 
 .home3-service-section .service-wrapper .service-list .single-service .service-content ul li {
     display: inline-flex;
-}
-
-.home3-service-section .service-wrapper .service-list .single-service .service-content ul li a {
     color: var(--dark-text-color);
     font-family: var(--font-spaceGrotesk);
     font-weight: 400;
@@ -12803,8 +12800,11 @@ header.style-2.two {
     line-height: 1;
     padding: 12px 24px;
     border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     background-color: #1E1E1E;
     transition: 0.5s;
+    margin-right: 8px;
+    margin-bottom: 8px;
 }
 
 @media (max-width: 576px) {
@@ -12813,8 +12813,9 @@ header.style-2.two {
     }
 }
 
-.home3-service-section .service-wrapper .service-list .single-service .service-content ul li a:hover {
+.home3-service-section .service-wrapper .service-list .single-service .service-content ul li:hover {
     color: var(--white-color);
+    border-color: var(--primary-color1);
 }
 
 .home3-service-section .service-wrapper .service-list .single-service .service-content p {

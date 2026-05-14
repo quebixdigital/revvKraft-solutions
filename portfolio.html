@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Durgesh Sonar">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/plugins/jquery-ui.css" rel="stylesheet">
+    <!-- Bootstrap Icon CSS -->
+    <link href="assets/vendor/plugins/bootstrap-icons.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="assets/vendor/plugins/animate.min.css" rel="stylesheet">
+    <!-- FancyBox CSS -->
+    <link href="assets/vendor/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <!-- Swiper slider CSS -->
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <!-- Slick slider CSS -->
+    <link rel="stylesheet" href="assets/vendor/plugins/slick.css">
+    <link rel="stylesheet" href="assets/vendor/plugins/slick-theme.css">
+    <!-- BoxIcon  CSS -->
+    <link href="assets/vendor/plugins/boxicons.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--  Style CSS  -->
+    <link rel="stylesheet" href="assets/css/root-colors.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .portfolio-page-section .portfolio-content h3 {
+            margin-bottom: 10px;
+        }
+        .portfolio-page-section .portfolio-content ul {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .portfolio-page-section .portfolio-content ul li:first-child {
+            display: inline-flex;
+            color: var(--dark-text-color);
+            font-family: var(--font-spaceGrotesk);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1;
+            padding: 8px 16px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background-color: #1E1E1E;
+            width: fit-content;
+        }
+        .portfolio-page-section .portfolio-content ul li:last-child {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 15px;
+            margin-top: 5px;
+            display: block;
+        }
+        .portfolio-page-section .primary-btn1.small-btn {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+        .portfolio-page-section .primary-btn1.small-btn span {
+            padding: 0;
+        }
+    </style>
+    <!-- Title -->
+    <title>RevvKraft Solutions - Portfolio</title>
+    <link rel="icon" href="assets/revvkraft-favicon.png" type="image/png">
+</head>
+
+<body class="tt-magic-cursor dark">
+
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+
+    <!-- Back To Top -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+        <svg class="arrow" width="22" height="25" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0.556131 11.4439L11.8139 0.186067L13.9214 2.29352L13.9422 20.6852L9.70638 20.7061L9.76793 8.22168L3.6064 14.4941L0.556131 11.4439Z"/>
+            <path d="M23.1276 11.4999L16.0288 4.40105L15.9991 10.4203L20.1031 14.5243L23.1276 11.4999Z"/>
+        </svg>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="right-sidebar-overlay"></div>
+    <div class="right-sidebar" aria-hidden="true">
+        <button class="right-sidebar-close" type="button" aria-label="Close sidebar">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14.6694 3.0106C14.8839 2.78848 15.0026 2.49099 15 2.18219C14.9973 1.8734 14.8734 1.57801 14.6551 1.35966C14.4367 1.1413 14.1413 1.01744 13.8325 1.01475C13.5237 1.01207 13.2262 1.13078 13.0041 1.34531L8.00706 6.34236L3.01119 1.34531C2.90184 1.23589 2.77202 1.14907 2.62912 1.08983C2.48623 1.03058 2.33306 1.00005 2.17837 1C2.02368 0.999945 1.87049 1.03036 1.72756 1.08951C1.58462 1.14865 1.45473 1.23538 1.34531 1.34472C1.23589 1.45407 1.14907 1.58389 1.08983 1.72679C1.03058 1.86968 1.00005 2.02285 1 2.17754C0.999945 2.33223 1.03036 2.48542 1.08951 2.62835C1.14865 2.77129 1.23538 2.90118 1.34472 3.0106L6.34177 8.00765L1.34472 13.0047C1.12389 13.2257 0.99989 13.5253 1 13.8378C1.00011 14.1502 1.12432 14.4497 1.34531 14.6706C1.5663 14.8914 1.86596 15.0154 2.17837 15.0153C2.49078 15.0152 2.79036 14.891 3.01119 14.67L8.00706 9.67294L13.0041 14.67C13.2262 14.8845 13.5237 15.0032 13.8325 15.0005C14.1413 14.9979 14.4367 14.874 14.6551 14.6556C14.8734 14.4373 14.9973 14.1419 15 13.8331C15.0026 13.5243 14.8839 13.2268 14.6694 13.0047L9.67235 8.00765L14.6694 3.0106Z" />
+            </svg>
+        </button>
+        <div class="right-sidebar-content">
+            <div class="main-menu">
+                <ul class="menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Our Solutions</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="contact-area">
+                <h5>Contact Info</h5>
+                <ul class="contact-list">
+                    <li class="single-contact">
+                        <div class="icon">
+                            <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path
+                                        d="M9.07059 7.78198L7.89814 8.9584C7.42269 9.43552 6.58613 9.4458 6.1004 8.9584L4.9279 7.78198L0.716797 12.0068C0.873548 12.0792 1.04638 12.1225 1.23011 12.1225H12.7684C12.9522 12.1225 13.1249 12.0793 13.2816 12.0068L9.07059 7.78198Z"/>
+                                    <path
+                                        d="M12.7687 2.27942H1.23039C1.04665 2.27942 0.873822 2.32267 0.717125 2.39516L5.21698 6.90995C5.21729 6.91025 5.21764 6.9103 5.21794 6.9106C5.21813 6.9108 5.21825 6.91105 5.2183 6.91131L6.68145 8.3793C6.83686 8.53471 7.16228 8.53471 7.3177 8.3793L8.78055 6.91156C8.78055 6.91156 8.7809 6.9109 8.7812 6.9106C8.7812 6.9106 8.78186 6.91025 8.78216 6.90995L13.2819 2.39513C13.1252 2.32262 12.9524 2.27942 12.7687 2.27942ZM0.130859 2.96876C0.0497624 3.13276 0 3.3148 0 3.50981V10.8921C0 11.0871 0.0497077 11.2692 0.130831 11.4332L4.34923 7.20111L0.130859 2.96876ZM13.8682 2.96871L9.64988 7.20111L13.8682 11.4332C13.9493 11.2692 13.9991 11.0872 13.9991 10.8921V3.50981C13.9991 3.31475 13.9493 3.13271 13.8682 2.96871Z"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <a href="mailto:hello@revvkraft.com">hello@revvkraft.com</a>
+                    </li>
+                    <li class="single-contact">
+                        <div class="icon">
+                            <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path
+                                        d="M12.8766 9.18937C12.0195 9.18937 11.1779 9.05531 10.3804 8.79176C9.98956 8.65846 9.50915 8.78075 9.27064 9.02571L7.69648 10.214C5.87091 9.23954 4.74639 8.11538 3.7852 6.30352L4.93856 4.77038C5.23821 4.47113 5.34569 4.03399 5.21692 3.62384C4.95223 2.82212 4.81777 1.98092 4.81777 1.12342C4.81781 0.503962 4.31385 0 3.69442 0H1.12339C0.503962 0 0 0.503962 0 1.12339C0 8.22363 5.77637 14 12.8766 14C13.496 14 14 13.496 14 12.8766V10.3127C14 9.69333 13.496 9.18937 12.8766 9.18937Z"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <a href="tel:+912012345678">+91 20 1234 5678</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- header Section Start-->
+            <header class="header-area style-1">
+                <div class="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
+                    <div class="logo-and-location-area">
+                        <div class="company-logo">
+                            <a href="index.html"><img src="assets/revvkraft-logo.png" alt="RevvKraft Logo" loading="lazy"></a>
+                        </div>
+                        <div class="location d-lg-flex d-none">
+                            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path
+                                        d="M16 0C15.2867 14.7 14.7 15.2867 0 16C14.7 16.7133 15.2867 17.3 16 32C16.7133 17.3 17.3 16.7133 32 16C17.3 15.2867 16.7133 14.7 16 0Z" />
+                                </g>
+                            </svg>
+                            <span>Based on Pune, Maharashtra, India.</span>
+                        </div>
+                    </div>
+                    <div class="nav-right">
+                        <a href="contact.html" class="primary-btn1 white-bg">
+                            <span>
+                                Let’s Talk
+                            </span>
+                            <span>
+                                Let’s Talk
+                            </span>
+                        </a>
+                        <div class="right-sidebar-button" role="button" tabindex="0" aria-label="Open sidebar menu">
+                            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path
+                                        d="M4.6142 0.138593C3.82636 -0.0461926 3.00645 -0.0461926 2.21861 0.138593C1.71263 0.257272 1.24984 0.514861 0.882348 0.882352C0.514858 1.24984 0.257268 1.71264 0.138589 2.21862C-0.0461965 3.00645 -0.0461965 3.82636 0.138589 4.6142C0.257268 5.12018 0.514858 5.58297 0.882348 5.95046C1.24984 6.31796 1.71263 6.57554 2.21861 6.69422C3.00645 6.87904 3.82636 6.87904 4.6142 6.69422C5.12017 6.57554 5.58297 6.31796 5.95046 5.95046C6.31795 5.58297 6.57554 5.12018 6.69422 4.6142C6.87904 3.82637 6.87904 3.00645 6.69422 2.21862C6.57554 1.71264 6.31795 1.24984 5.95046 0.882352C5.58297 0.514861 5.12017 0.257272 4.6142 0.138593ZM4.6142 9.30581C3.82636 9.12099 3.00645 9.12099 2.21861 9.30581C1.71263 9.42449 1.24984 9.68208 0.882348 10.0496C0.514858 10.4171 0.257268 10.8799 0.138589 11.3858C-0.0461965 12.1737 -0.0461965 12.9936 0.138589 13.7814C0.257268 14.2874 0.514858 14.7502 0.882348 15.1177C1.24984 15.4852 1.71263 15.7428 2.21861 15.8614C3.00645 16.0462 3.82635 16.0462 4.6142 15.8614C5.12017 15.7428 5.58297 15.4852 5.95046 15.1177C6.31795 14.7502 6.57554 14.2874 6.69422 13.7814C6.87904 12.9936 6.87904 12.1737 6.69422 11.3858C6.57554 10.8799 6.31795 10.4171 5.95046 10.0496C5.58297 9.68208 5.12017 9.42449 4.6142 9.30581ZM13.7814 0.138593C12.9936 -0.0461926 12.1737 -0.0461926 11.3858 0.138593C10.8798 0.257272 10.4171 0.514861 10.0496 0.882352C9.68207 1.24984 9.42448 1.71264 9.3058 2.21862C9.12099 3.00645 9.12099 3.82637 9.3058 4.6142C9.42448 5.12018 9.68207 5.58297 10.0496 5.95046C10.4171 6.31796 10.8798 6.57554 11.3858 6.69422C12.1737 6.87904 12.9936 6.87904 13.7814 6.69422C14.2874 6.57554 14.7502 6.31796 15.1177 5.95046C15.4852 5.58297 15.7428 5.12018 15.8614 4.6142C16.0462 3.82636 16.0462 3.00646 15.8614 2.21862C15.7428 1.71264 15.4852 1.24984 15.1177 0.882352C14.7502 0.514861 14.2874 0.257272 13.7814 0.138593ZM13.7814 9.30581C12.9936 9.12099 12.1737 9.12099 11.3858 9.30581C10.8798 9.42449 10.4171 9.68208 10.0496 10.0496C9.68207 10.4171 9.42448 10.8799 9.3058 11.3858C9.12099 12.1737 9.12099 12.9936 9.3058 13.7814C9.42448 14.2874 9.68207 14.7502 10.0496 15.1177C10.4171 15.4852 10.8798 15.7428 11.3858 15.8614C12.1737 16.0462 12.9936 16.0462 13.7814 15.8614C14.2874 15.7428 14.7502 15.4852 15.1177 15.1177C15.4852 14.7502 15.7428 14.2874 15.8614 13.7814C16.0462 12.9936 16.0462 12.1737 15.8614 11.3858C15.7428 10.8799 15.4852 10.4171 15.1177 10.0496C14.7502 9.68208 14.2874 9.42449 13.7814 9.30581Z" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header Section End-->
+
+            <main>
+                <!-- Breadcrumb Section Start -->
+                <div class="breadcrumb-section mb-150">
+                    <div class="container mb-70">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8 col-lg-10">
+                                <div class="breadcrumb-content">
+                                    <h1>Portfolio</h1>
+                                    <ul class="breadcrumb-list">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li>
+                                            <svg width="25" height="6" viewBox="0 0 25 6" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM20 3.5L25 5.88675V0.113249L20 2.5V3.5ZM4.5 3.5H20.5V2.5H4.5V3.5Z"></path>
+                                            </svg> Portfolio
+                                        </li>
+                                    </ul>
+                                    <p class="mt-4 text-center">Explore how RevvKraft builds digital growth systems, brand experiences, and revenue-focused solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="breadcrumb-image-section">
+                        <div class="breadcrumb-img">
+                            <img src="assets/images/gallery/breadcrumb-img3.jpg" alt="Portfolio Banner" data-lag="0" data-speed=".8" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <!-- Breadcrumb Section End -->
+
+                <!-- Portfolio Page Section Start -->
+                <div class="portfolio-page-section mb-150">
+                    <div class="container-fluid">
+                        <div class="row gx-lg-4 gx-md-3 gy-5 mb-100">
+                            <!-- Card 1 -->
+                            <div class="col-md-6">
+                                <div class="portfolio-card">
+                                    <a data-cursor="View Details" href="#" aria-disabled="true" class="portfolio-img">
+                                        <img src="assets/images/projects/portfolio-img1.jpg" alt="Sales Growth Consulting"
+                                            loading="lazy">
+                                    </a>
+                                    <div class="portfolio-content">
+                                        <h3><a href="service.html#sales-growth-consulting">Sales Growth Consulting</a></h3>
+                                        <ul>
+                                            <li>Revenue Strategy</li>
+                                            <li>We build repeatable sales systems from the ground up.</li>
+                                        </ul>
+                                        <div class="view-details-btn mt-3">
+                                            <a href="#" aria-disabled="true" class="primary-btn1 small-btn">
+                                                <span>View Details</span>
+                                                <span>View Details</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="col-md-6">
+                                <div class="portfolio-card two">
+                                    <a data-cursor="View Details" href="#" aria-disabled="true" class="portfolio-img">
+                                        <img src="assets/images/projects/portfolio-img2.jpg" alt="Digital Marketing Campaigns"
+                                            loading="lazy">
+                                    </a>
+                                    <div class="portfolio-content">
+                                        <h3><a href="service.html#digital-marketing">Digital Marketing Campaigns</a></h3>
+                                        <ul>
+                                            <li>Lead Generation</li>
+                                            <li>Full-service paid lead generation and online presence management.</li>
+                                        </ul>
+                                        <div class="view-details-btn mt-3">
+                                            <a href="#" aria-disabled="true" class="primary-btn1 small-btn">
+                                                <span>View Details</span>
+                                                <span>View Details</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col-md-6">
+                                <div class="portfolio-card">
+                                    <a data-cursor="View Details" href="#" aria-disabled="true" class="portfolio-img">
+                                        <img src="assets/images/projects/portfolio-img3.jpg" alt="Website & UX Design"
+                                            loading="lazy">
+                                    </a>
+                                    <div class="portfolio-content">
+                                        <h3><a href="service.html">Website & UX Design</a></h3>
+                                        <ul>
+                                            <li>Web Design</li>
+                                            <li>Turning concepts into reality with functional, beautiful solutions.</li>
+                                        </ul>
+                                        <div class="view-details-btn mt-3">
+                                            <a href="#" aria-disabled="true" class="primary-btn1 small-btn">
+                                                <span>View Details</span>
+                                                <span>View Details</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="col-md-6">
+                                <div class="portfolio-card two">
+                                    <a data-cursor="View Details" href="#" aria-disabled="true" class="portfolio-img">
+                                        <img src="assets/images/projects/portfolio-img4.jpg" alt="Exhibition Stall Design"
+                                            loading="lazy">
+                                    </a>
+                                    <div class="portfolio-content">
+                                        <h3><a href="service.html#exhibition-stall-design">Exhibition Stall Design</a></h3>
+                                        <ul>
+                                            <li>Brand Experience</li>
+                                            <li>Stalls that command attention and communicate value clearly.</li>
+                                        </ul>
+                                        <div class="view-details-btn mt-3">
+                                            <a href="#" aria-disabled="true" class="primary-btn1 small-btn">
+                                                <span>View Details</span>
+                                                <span>View Details</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Page Section End -->
+            </main>
+
+            <!-- home1 Footer Section Start-->
+            <footer class="footer-section one">
+                <div class="footer-wrapper">
+                    <div class="container">
+                        <div class="footer-main">
+
+                            <div class="footer-widget footer-about">
+                                <a href="index.html" class="company-logo">
+                                    <img src="assets/revvkraft-logo.png" alt="RevvKraft Logo" loading="lazy">
+                                </a>
+                                <p>
+                                    RevvKraft helps businesses build scalable revenue systems, digital growth engines,
+                                    and stronger brand presence.
+                                </p>
+                                <ul class="social-list">
+                                    <li><a href="https://www.facebook.com/" aria-label="Facebook"><i
+                                                class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/" aria-label="LinkedIn"><i
+                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.youtube.com/" aria-label="YouTube"><i
+                                                class="fa-brands fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="footer-widget">
+                                <h3 class="widget-title">Quick Links</h3>
+                                <ul class="footer-menu-list">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="service.html">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="footer-widget footer-contact">
+                                <h3 class="widget-title">Contact Info</h3>
+                                <ul class="contact-list">
+                                    <li>Pune, Maharashtra, India</li>
+                                    <li><a href="mailto:hello@revvkraft.com">hello@revvkraft.com</a></li>
+                                    <li><a href="tel:+912012345678">+91 20 1234 5678</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="footer-bottom">
+                            <p>© 2026 RevvKraft Solutions. All Rights Reserved.</p>
+                            <p>Design & Developed by Quebix Digital</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- home1 Footer Section End-->
+        </div>
+    </div>
+
+    <!--  Main jQuery  -->
+    <script src="assets/vendor/plugins/jquery-3.7.1.min.js"></script>
+    <script src="assets/vendor/plugins/jquery-ui.js"></script>
+
+    <!-- Popper and Bootstrap JS -->
+    <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/vendor/bootstrap/popper.min.js"></script>
+    <!-- Swiper slider JS -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/plugins/slick.js"></script>
+    <!-- Waypoints JS -->
+    <script src="assets/vendor/plugins/waypoints.min.js"></script>
+    <!-- Counterup JS -->
+    <script src="assets/vendor/plugins/jquery.counterup.min.js"></script>
+    <!-- Wow JS -->
+    <script src="assets/vendor/plugins/wow.min.js"></script>
+    <!-- Marquee  JS -->
+    <script src="assets/vendor/plugins/jquery.marquee.min.js"></script>
+    <!-- Gsap  JS -->
+    <script src="assets/vendor/gsap/gsap.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollSmoother.min.js"></script>
+    <script src="assets/vendor/gsap/Draggable.min.js"></script>
+    <script src="assets/vendor/gsap/SplitText.min.js"></script>
+    <!-- FancyBox  JS -->
+    <script src="assets/vendor/plugins/jquery.fancybox.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
