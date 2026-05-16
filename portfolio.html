@@ -68,6 +68,150 @@
     <!-- Title -->
     <title>RevvKraft Solutions - Portfolio</title>
     <link rel="icon" href="assets/revvkraft-favicon.png" type="image/png">
+
+    <style>
+        .premium-portfolio-section {
+            padding: 80px 0 120px;
+        }
+        .case-study-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 40px;
+            padding: 60px;
+            margin-bottom: 80px;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+        }
+        .case-study-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top left, rgba(var(--primary-color1-opc), 0.1), transparent 50%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 0;
+        }
+        .case-study-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(var(--primary-color1-opc), 0.3);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
+        }
+        .case-study-card:hover::before {
+            opacity: 1;
+        }
+        .case-study-card.reverse {
+            flex-direction: row-reverse;
+        }
+        .cs-image-wrapper {
+            flex: 1;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .cs-image-wrapper img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            transition: transform 1.2s ease;
+        }
+        .case-study-card:hover .cs-image-wrapper img {
+            transform: scale(1.05);
+        }
+        .cs-content {
+            flex: 1.2;
+            z-index: 1;
+        }
+        .cs-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 100px;
+            background: rgba(var(--primary-color1-opc), 0.1);
+            color: var(--primary-color1);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border: 1px solid rgba(var(--primary-color1-opc), 0.2);
+        }
+        .cs-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+            line-height: 1.2;
+        }
+        .cs-description {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .cs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .cs-metric {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .cs-metric h4 {
+            color: var(--primary-color1);
+            font-size: 32px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        .cs-metric p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .cs-details h4 {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .cs-details p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        @media (max-width: 991px) {
+            .case-study-card, .case-study-card.reverse {
+                flex-direction: column;
+                padding: 40px;
+                gap: 40px;
+            }
+            .cs-title {
+                font-size: 32px;
+            }
+        }
+        @media (max-width: 576px) {
+            .case-study-card {
+                padding: 25px;
+            }
+            .cs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body class="tt-magic-cursor dark">
@@ -156,7 +300,7 @@
                                         d="M16 0C15.2867 14.7 14.7 15.2867 0 16C14.7 16.7133 15.2867 17.3 16 32C16.7133 17.3 17.3 16.7133 32 16C17.3 15.2867 16.7133 14.7 16 0Z" />
                                 </g>
                             </svg>
-                            <span>Based on Pune, Maharashtra, India.</span>
+                            <span>Based in Pune, Maharashtra, India.</span>
                         </div>
                     </div>
                     <div class="nav-right">
@@ -210,102 +354,172 @@
                 </div>
                 <!-- Breadcrumb Section End -->
 
-                <!-- Portfolio Page Section Start -->
-                <div class="portfolio-page-section mb-150">
-                    <div class="container-fluid">
-                        <div class="row gx-lg-4 gx-md-3 gy-5 mb-100">
-                            <!-- Card 1 -->
-                            <div class="col-md-6">
-                                <div class="portfolio-card">
-                                    <a data-cursor="View Details" href="#" aria-disabled="true" class="portfolio-img">
-                                        <img src="assets/images/projects/portfolio-img1.jpg" alt="Sales Growth Consulting"
-                                            loading="lazy">
-                                    </a>
-                                    <div class="portfolio-content">
-                                        <h3><a href="service.html#sales-growth-consulting">Sales Growth Consulting</a></h3>
-                                        <ul>
-                                            <li>Revenue Strategy</li>
-                                            <li>We build repeatable sales systems from the ground up.</li>
-                                        </ul>
-                                        <div class="view-details-btn mt-3">
-                                            <a href="#" aria-disabled="true" class="primary-btn1 small-btn">
-                                                <span>View Details</span>
-                                                <span>View Details</span>
-                                            </a>
-                                        </div>
-                                    </div>
+                
+                <!-- Premium Portfolio Section Start -->
+                <div class="premium-portfolio-section">
+                    <div class="container">
+                        <div class="row justify-content-center mb-80">
+                            <div class="col-lg-8">
+                                <div class="section-title text-center">
+                                    <span class="fade_anim" data-delay=".1">Proven Results</span>
+                                    <h2 class="fade_anim" data-delay=".2">Systems That Generate Revenue</h2>
+                                    <p class="fade_anim" data-delay=".3">We don't just deliver services; we deliver measurable business outcomes. Explore how our custom-built frameworks have transformed mid-size businesses.</p>
                                 </div>
                             </div>
-                            <!-- Card 2 -->
-                            <div class="col-md-6">
-                                <div class="portfolio-card two">
-                                    <a data-cursor="View Details" href="#" aria-disabled="true" class="portfolio-img">
-                                        <img src="assets/images/projects/portfolio-img2.jpg" alt="Digital Marketing Campaigns"
-                                            loading="lazy">
-                                    </a>
-                                    <div class="portfolio-content">
-                                        <h3><a href="service.html#digital-marketing">Digital Marketing Campaigns</a></h3>
-                                        <ul>
-                                            <li>Lead Generation</li>
-                                            <li>Full-service paid lead generation and online presence management.</li>
-                                        </ul>
-                                        <div class="view-details-btn mt-3">
-                                            <a href="#" aria-disabled="true" class="primary-btn1 small-btn">
-                                                <span>View Details</span>
-                                                <span>View Details</span>
-                                            </a>
-                                        </div>
+                        </div>
+
+                        <!-- Case Study 1 -->
+                        <div class="case-study-card fade_anim" data-delay=".2">
+                            <div class="cs-image-wrapper">
+                                <img src="assets/images/projects/portfolio-img1.jpg" alt="Sales System Overhaul" loading="lazy">
+                            </div>
+                            <div class="cs-content">
+                                <div class="cs-badge">Sales Growth Consulting</div>
+                                <h3 class="cs-title">Manufacturing Firm Revenue Turnaround</h3>
+                                <p class="cs-description">A legacy manufacturing company was struggling with a flatlined revenue curve and unpredictable pipeline. They had strong products but relied entirely on founder-led sales.</p>
+                                
+                                <div class="cs-details">
+                                    <h4>The System Built</h4>
+                                    <p>We conducted a full 6-dimensional pipeline audit, designed a bespoke Sales Playbook, and implemented an intensive 90-day execution framework. We trained their new sales hires to remove dependency on the founder.</p>
+                                </div>
+
+                                <div class="cs-grid">
+                                    <div class="cs-metric">
+                                        <h4>40%</h4>
+                                        <p>QoQ Revenue Growth</p>
+                                    </div>
+                                    <div class="cs-metric">
+                                        <h4>3x</h4>
+                                        <p>Pipeline Predictability</p>
                                     </div>
                                 </div>
+                                <a href="contact.html" class="primary-btn1">
+                                    <span>Discuss Your Sales Setup</span>
+                                    <span>Discuss Your Sales Setup</span>
+                                </a>
                             </div>
-                            <!-- Card 3 -->
-                            <div class="col-md-6">
-                                <div class="portfolio-card">
-                                    <a data-cursor="View Details" href="#" aria-disabled="true" class="portfolio-img">
-                                        <img src="assets/images/projects/portfolio-img3.jpg" alt="Website & UX Design"
-                                            loading="lazy">
-                                    </a>
-                                    <div class="portfolio-content">
-                                        <h3><a href="service.html">Website & UX Design</a></h3>
-                                        <ul>
-                                            <li>Web Design</li>
-                                            <li>Turning concepts into reality with functional, beautiful solutions.</li>
-                                        </ul>
-                                        <div class="view-details-btn mt-3">
-                                            <a href="#" aria-disabled="true" class="primary-btn1 small-btn">
-                                                <span>View Details</span>
-                                                <span>View Details</span>
-                                            </a>
-                                        </div>
+                        </div>
+
+                        <!-- Case Study 2 -->
+                        <div class="case-study-card reverse fade_anim" data-delay=".2">
+                            <div class="cs-image-wrapper">
+                                <img src="assets/images/projects/portfolio-img2.jpg" alt="Digital Marketing Scaling" loading="lazy">
+                            </div>
+                            <div class="cs-content">
+                                <div class="cs-badge">Digital Marketing</div>
+                                <h3 class="cs-title">B2B Tech Lead Generation Engine</h3>
+                                <p class="cs-description">A mid-size B2B software provider was burning cash on generic digital ads without capturing high-intent prospects. Their sales team was starved of qualified meetings.</p>
+                                
+                                <div class="cs-details">
+                                    <h4>The System Built</h4>
+                                    <p>We took over their complete digital operation ("Done for You"). We restructured their Meta and LinkedIn Ad funnels, implemented aggressive A/B testing on landing pages, and established a CRM-integrated lead nurturing flow.</p>
+                                </div>
+
+                                <div class="cs-grid">
+                                    <div class="cs-metric">
+                                        <h4>500+</h4>
+                                        <p>Qualified Monthly Leads</p>
+                                    </div>
+                                    <div class="cs-metric">
+                                        <h4>65%</h4>
+                                        <p>Drop in Cost-Per-Acquisition</p>
                                     </div>
                                 </div>
+                                <a href="contact.html" class="primary-btn1">
+                                    <span>Scale Your Lead Gen</span>
+                                    <span>Scale Your Lead Gen</span>
+                                </a>
                             </div>
-                            <!-- Card 4 -->
-                            <div class="col-md-6">
-                                <div class="portfolio-card two">
-                                    <a data-cursor="View Details" href="#" aria-disabled="true" class="portfolio-img">
-                                        <img src="assets/images/projects/portfolio-img4.jpg" alt="Exhibition Stall Design"
-                                            loading="lazy">
-                                    </a>
-                                    <div class="portfolio-content">
-                                        <h3><a href="service.html#exhibition-stall-design">Exhibition Stall Design</a></h3>
-                                        <ul>
-                                            <li>Brand Experience</li>
-                                            <li>Stalls that command attention and communicate value clearly.</li>
-                                        </ul>
-                                        <div class="view-details-btn mt-3">
-                                            <a href="#" aria-disabled="true" class="primary-btn1 small-btn">
-                                                <span>View Details</span>
-                                                <span>View Details</span>
-                                            </a>
-                                        </div>
+                        </div>
+
+                        <!-- Case Study 3 -->
+                        <div class="case-study-card fade_anim" data-delay=".2">
+                            <div class="cs-image-wrapper">
+                                <img src="assets/images/projects/portfolio-img4.jpg" alt="Exhibition Stall Design" loading="lazy">
+                            </div>
+                            <div class="cs-content">
+                                <div class="cs-badge">Exhibition Presence</div>
+                                <h3 class="cs-title">Dominated the Industry Expo</h3>
+                                <p class="cs-description">An emerging brand was blending into the background at major industry expos, losing footfall and crucial networking opportunities to larger, more established competitors.</p>
+                                
+                                <div class="cs-details">
+                                    <h4>The System Built</h4>
+                                    <p>We designed and manufactured a high-impact, custom 3D stall that focused on experiential product interaction. We managed the entire physical build, branding, and lighting installation.</p>
+                                </div>
+
+                                <div class="cs-grid">
+                                    <div class="cs-metric">
+                                        <h4>2.5x</h4>
+                                        <p>Increase in Booth Footfall</p>
                                     </div>
+                                    <div class="cs-metric">
+                                        <h4>100%</h4>
+                                        <p>Turnkey Execution</p>
+                                    </div>
+                                </div>
+                                <a href="contact.html" class="primary-btn1">
+                                    <span>Plan Your Next Exhibition</span>
+                                    <span>Plan Your Next Exhibition</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Premium Portfolio Section End -->
+
+                <!-- Process Section Start -->
+                <div class="portfolio-process-section" style="padding: 80px 0; background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <div class="container">
+                        <div class="row justify-content-center mb-60">
+                            <div class="col-lg-8 text-center">
+                                <span class="fade_anim" data-delay=".1" style="color: var(--primary-color1); text-transform: uppercase; letter-spacing: 2px; font-weight: 500; font-size: 14px; margin-bottom: 15px; display: inline-block;">Our Methodology</span>
+                                <h2 class="fade_anim" data-delay=".2" style="font-size: 42px; font-weight: 700; color: #fff; margin-bottom: 20px;">How We Guarantee Outcomes</h2>
+                                <p class="fade_anim" data-delay=".3" style="color: rgba(255,255,255,0.7); font-size: 18px; max-width: 600px; margin: 0 auto;">We don't guess. We follow a strict, data-backed approach to turn your growth potential into predictable revenue.</p>
+                            </div>
+                        </div>
+                        <div class="row gy-4 justify-content-center">
+                            <div class="col-lg-4 col-md-6 fade_anim" data-delay=".2">
+                                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 40px; height: 100%; transition: transform 0.3s ease;">
+                                    <h1 style="font-size: 60px; color: rgba(var(--primary-color1-opc), 0.2); margin-bottom: 20px; font-weight: 800; font-family: var(--font-archivo);">01</h1>
+                                    <h3 style="color: #fff; font-size: 24px; margin-bottom: 15px; font-weight: 600;">Diagnose & Audit</h3>
+                                    <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">We analyze your current sales pipeline, digital footprint, and brand positioning to identify exactly where you are losing revenue and opportunities.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 fade_anim" data-delay=".3">
+                                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 40px; height: 100%; transition: transform 0.3s ease;">
+                                    <h1 style="font-size: 60px; color: rgba(var(--primary-color1-opc), 0.2); margin-bottom: 20px; font-weight: 800; font-family: var(--font-archivo);">02</h1>
+                                    <h3 style="color: #fff; font-size: 24px; margin-bottom: 15px; font-weight: 600;">Build The System</h3>
+                                    <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">We create a custom playbook, launch targeted digital campaigns, and design your physical/digital brand assets. No templates, just pure strategy.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 fade_anim" data-delay=".4">
+                                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(var(--primary-color1-opc), 0.3); border-radius: 24px; padding: 40px; height: 100%; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(var(--primary-color1-opc), 0.1);">
+                                    <h1 style="font-size: 60px; color: var(--primary-color1); margin-bottom: 20px; font-weight: 800; font-family: var(--font-archivo);">03</h1>
+                                    <h3 style="color: #fff; font-size: 24px; margin-bottom: 15px; font-weight: 600;">Execute & Scale</h3>
+                                    <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">We run the systems, train your team, optimize the ads, and manage the processes. You focus on closing deals; we focus on filling the pipeline.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Portfolio Page Section End -->
+                <!-- Process Section End -->
+
+                <!-- CTA Section Start -->
+                <div class="portfolio-cta-section" style="padding: 100px 0; text-align: center; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: var(--primary-color1); opacity: 0.15; filter: blur(80px); z-radius: 50%; z-index: -1;"></div>
+                    <div class="container">
+                        <h2 class="fade_anim" data-delay=".1" style="font-size: 56px; font-weight: 800; color: #fff; margin-bottom: 20px; line-height: 1.2;">Ready to Become Our Next <span style="color: var(--primary-color1);">Success Story?</span></h2>
+                        <p class="fade_anim" data-delay=".2" style="font-size: 20px; color: rgba(255,255,255,0.7); max-width: 650px; margin: 0 auto 40px;">Stop losing revenue to poor systems. Let’s build an infrastructure that scales your business consistently.</p>
+                        <a href="contact.html" class="primary-btn1 fade_anim" data-delay=".3" style="padding: 18px 45px; border-radius: 100px; font-size: 16px;">
+                            <span>Book a Growth Consultation</span>
+                            <span>Book a Growth Consultation</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- CTA Section End -->
+
+
             </main>
 
             <!-- home1 Footer Section Start-->
@@ -323,12 +537,12 @@
                                     and stronger brand presence.
                                 </p>
                                 <ul class="social-list">
-                                    <li><a href="https://www.facebook.com/" aria-label="Facebook"><i
+                                    <li><a href="https://www.facebook.com/share/1Cor5ogyum/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
                                                 class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/" aria-label="LinkedIn"><i
+                                    <li><a href="https://www.linkedin.com/company/revvkraft-solutions/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
                                                 class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://www.youtube.com/" aria-label="YouTube"><i
-                                                class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="https://www.instagram.com/revvkraft?igsh=MTQ1bXppM3doMXpqMA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
                                 </ul>
                             </div>
 
