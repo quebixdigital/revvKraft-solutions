@@ -26031,6 +26031,7 @@ header.style-2.two {
 }
 
 .breadcrumb-section .breadcrumb-image-section .breadcrumb-img img {
+    width: 100%;
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
@@ -32167,6 +32168,7 @@ header.style-2.two {
 }
 
 .about2-page-banner-section .about-banner-image .banner-img img {
+    width: 100%;
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;

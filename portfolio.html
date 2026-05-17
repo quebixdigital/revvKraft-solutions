@@ -32,12 +32,14 @@
         .portfolio-page-section .portfolio-content h3 {
             margin-bottom: 10px;
         }
+
         .portfolio-page-section .portfolio-content ul {
             margin-bottom: 20px;
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
+
         .portfolio-page-section .portfolio-content ul li:first-child {
             display: inline-flex;
             color: var(--dark-text-color);
@@ -51,16 +53,19 @@
             background-color: #1E1E1E;
             width: fit-content;
         }
+
         .portfolio-page-section .portfolio-content ul li:last-child {
             color: rgba(255, 255, 255, 0.7);
             font-size: 15px;
             margin-top: 5px;
             display: block;
         }
+
         .portfolio-page-section .primary-btn1.small-btn {
             padding: 10px 20px;
             font-size: 14px;
         }
+
         .portfolio-page-section .primary-btn1.small-btn span {
             padding: 0;
         }
@@ -73,6 +78,7 @@
         .premium-portfolio-section {
             padding: 80px 0 120px;
         }
+
         .case-study-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -86,6 +92,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .case-study-card::before {
             content: '';
             position: absolute;
@@ -98,25 +105,30 @@
             transition: opacity 0.5s ease;
             z-index: 0;
         }
+
         .case-study-card:hover {
             transform: translateY(-10px);
             border-color: rgba(var(--primary-color1-opc), 0.3);
             box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
         }
+
         .case-study-card:hover::before {
             opacity: 1;
         }
+
         .case-study-card.reverse {
             flex-direction: row-reverse;
         }
+
         .cs-image-wrapper {
             flex: 1;
             border-radius: 24px;
             overflow: hidden;
             position: relative;
             z-index: 1;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
+
         .cs-image-wrapper img {
             width: 100%;
             height: auto;
@@ -124,13 +136,16 @@
             object-fit: cover;
             transition: transform 1.2s ease;
         }
+
         .case-study-card:hover .cs-image-wrapper img {
             transform: scale(1.05);
         }
+
         .cs-content {
             flex: 1.2;
             z-index: 1;
         }
+
         .cs-badge {
             display: inline-block;
             padding: 6px 16px;
@@ -144,6 +159,7 @@
             margin-bottom: 20px;
             border: 1px solid rgba(var(--primary-color1-opc), 0.2);
         }
+
         .cs-title {
             font-size: 42px;
             font-weight: 700;
@@ -151,30 +167,35 @@
             color: #fff;
             line-height: 1.2;
         }
+
         .cs-description {
             font-size: 18px;
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 40px;
             line-height: 1.6;
         }
+
         .cs-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             margin-bottom: 40px;
         }
+
         .cs-metric {
             background: rgba(0, 0, 0, 0.2);
             padding: 20px;
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .cs-metric h4 {
             color: var(--primary-color1);
             font-size: 32px;
             margin-bottom: 5px;
             font-weight: 700;
         }
+
         .cs-metric p {
             font-size: 14px;
             color: rgba(255, 255, 255, 0.6);
@@ -182,31 +203,39 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
         .cs-details h4 {
             font-size: 18px;
             color: #fff;
             margin-bottom: 10px;
         }
+
         .cs-details p {
             font-size: 15px;
             color: rgba(255, 255, 255, 0.6);
             margin-bottom: 20px;
             line-height: 1.5;
         }
+
         @media (max-width: 991px) {
-            .case-study-card, .case-study-card.reverse {
+
+            .case-study-card,
+            .case-study-card.reverse {
                 flex-direction: column;
                 padding: 40px;
                 gap: 40px;
             }
+
             .cs-title {
                 font-size: 32px;
             }
         }
+
         @media (max-width: 576px) {
             .case-study-card {
                 padding: 25px;
             }
+
             .cs-grid {
                 grid-template-columns: 1fr;
             }
@@ -223,12 +252,12 @@
     <!-- Back To Top -->
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
         <svg class="arrow" width="22" height="25" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
             <path
-                d="M0.556131 11.4439L11.8139 0.186067L13.9214 2.29352L13.9422 20.6852L9.70638 20.7061L9.76793 8.22168L3.6064 14.4941L0.556131 11.4439Z"/>
-            <path d="M23.1276 11.4999L16.0288 4.40105L15.9991 10.4203L20.1031 14.5243L23.1276 11.4999Z"/>
+                d="M0.556131 11.4439L11.8139 0.186067L13.9214 2.29352L13.9422 20.6852L9.70638 20.7061L9.76793 8.22168L3.6064 14.4941L0.556131 11.4439Z" />
+            <path d="M23.1276 11.4999L16.0288 4.40105L15.9991 10.4203L20.1031 14.5243L23.1276 11.4999Z" />
         </svg>
     </div>
 
@@ -259,9 +288,9 @@
                             <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                                 <g>
                                     <path
-                                        d="M9.07059 7.78198L7.89814 8.9584C7.42269 9.43552 6.58613 9.4458 6.1004 8.9584L4.9279 7.78198L0.716797 12.0068C0.873548 12.0792 1.04638 12.1225 1.23011 12.1225H12.7684C12.9522 12.1225 13.1249 12.0793 13.2816 12.0068L9.07059 7.78198Z"/>
+                                        d="M9.07059 7.78198L7.89814 8.9584C7.42269 9.43552 6.58613 9.4458 6.1004 8.9584L4.9279 7.78198L0.716797 12.0068C0.873548 12.0792 1.04638 12.1225 1.23011 12.1225H12.7684C12.9522 12.1225 13.1249 12.0793 13.2816 12.0068L9.07059 7.78198Z" />
                                     <path
-                                        d="M12.7687 2.27942H1.23039C1.04665 2.27942 0.873822 2.32267 0.717125 2.39516L5.21698 6.90995C5.21729 6.91025 5.21764 6.9103 5.21794 6.9106C5.21813 6.9108 5.21825 6.91105 5.2183 6.91131L6.68145 8.3793C6.83686 8.53471 7.16228 8.53471 7.3177 8.3793L8.78055 6.91156C8.78055 6.91156 8.7809 6.9109 8.7812 6.9106C8.7812 6.9106 8.78186 6.91025 8.78216 6.90995L13.2819 2.39513C13.1252 2.32262 12.9524 2.27942 12.7687 2.27942ZM0.130859 2.96876C0.0497624 3.13276 0 3.3148 0 3.50981V10.8921C0 11.0871 0.0497077 11.2692 0.130831 11.4332L4.34923 7.20111L0.130859 2.96876ZM13.8682 2.96871L9.64988 7.20111L13.8682 11.4332C13.9493 11.2692 13.9991 11.0872 13.9991 10.8921V3.50981C13.9991 3.31475 13.9493 3.13271 13.8682 2.96871Z"/>
+                                        d="M12.7687 2.27942H1.23039C1.04665 2.27942 0.873822 2.32267 0.717125 2.39516L5.21698 6.90995C5.21729 6.91025 5.21764 6.9103 5.21794 6.9106C5.21813 6.9108 5.21825 6.91105 5.2183 6.91131L6.68145 8.3793C6.83686 8.53471 7.16228 8.53471 7.3177 8.3793L8.78055 6.91156C8.78055 6.91156 8.7809 6.9109 8.7812 6.9106C8.7812 6.9106 8.78186 6.91025 8.78216 6.90995L13.2819 2.39513C13.1252 2.32262 12.9524 2.27942 12.7687 2.27942ZM0.130859 2.96876C0.0497624 3.13276 0 3.3148 0 3.50981V10.8921C0 11.0871 0.0497077 11.2692 0.130831 11.4332L4.34923 7.20111L0.130859 2.96876ZM13.8682 2.96871L9.64988 7.20111L13.8682 11.4332C13.9493 11.2692 13.9991 11.0872 13.9991 10.8921V3.50981C13.9991 3.31475 13.9493 3.13271 13.8682 2.96871Z" />
                                 </g>
                             </svg>
                         </div>
@@ -272,7 +301,7 @@
                             <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                                 <g>
                                     <path
-                                        d="M12.8766 9.18937C12.0195 9.18937 11.1779 9.05531 10.3804 8.79176C9.98956 8.65846 9.50915 8.78075 9.27064 9.02571L7.69648 10.214C5.87091 9.23954 4.74639 8.11538 3.7852 6.30352L4.93856 4.77038C5.23821 4.47113 5.34569 4.03399 5.21692 3.62384C4.95223 2.82212 4.81777 1.98092 4.81777 1.12342C4.81781 0.503962 4.31385 0 3.69442 0H1.12339C0.503962 0 0 0.503962 0 1.12339C0 8.22363 5.77637 14 12.8766 14C13.496 14 14 13.496 14 12.8766V10.3127C14 9.69333 13.496 9.18937 12.8766 9.18937Z"/>
+                                        d="M12.8766 9.18937C12.0195 9.18937 11.1779 9.05531 10.3804 8.79176C9.98956 8.65846 9.50915 8.78075 9.27064 9.02571L7.69648 10.214C5.87091 9.23954 4.74639 8.11538 3.7852 6.30352L4.93856 4.77038C5.23821 4.47113 5.34569 4.03399 5.21692 3.62384C4.95223 2.82212 4.81777 1.98092 4.81777 1.12342C4.81781 0.503962 4.31385 0 3.69442 0H1.12339C0.503962 0 0 0.503962 0 1.12339C0 8.22363 5.77637 14 12.8766 14C13.496 14 14 13.496 14 12.8766V10.3127C14 9.69333 13.496 9.18937 12.8766 9.18937Z" />
                                 </g>
                             </svg>
                         </div>
@@ -291,7 +320,8 @@
                 <div class="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
                     <div class="logo-and-location-area">
                         <div class="company-logo">
-                            <a href="index.html"><img src="assets/revvkraft-logo.png" alt="RevvKraft Logo" loading="lazy"></a>
+                            <a href="index.html"><img src="assets/revvkraft-logo.png" alt="RevvKraft Logo"
+                                    loading="lazy"></a>
                         </div>
                         <div class="location d-lg-flex d-none">
                             <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -336,25 +366,30 @@
                                     <ul class="breadcrumb-list">
                                         <li><a href="index.html">Home</a></li>
                                         <li>
-                                            <svg width="25" height="6" viewBox="0 0 25 6" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM20 3.5L25 5.88675V0.113249L20 2.5V3.5ZM4.5 3.5H20.5V2.5H4.5V3.5Z"></path>
+                                            <svg width="25" height="6" viewBox="0 0 25 6"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM20 3.5L25 5.88675V0.113249L20 2.5V3.5ZM4.5 3.5H20.5V2.5H4.5V3.5Z">
+                                                </path>
                                             </svg> Portfolio
                                         </li>
                                     </ul>
-                                    <p class="mt-4 text-center">Explore how RevvKraft builds digital growth systems, brand experiences, and revenue-focused solutions.</p>
+                                    <p class="mt-4 text-center">Explore how RevvKraft builds digital growth systems,
+                                        brand experiences, and revenue-focused solutions.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="breadcrumb-image-section">
                         <div class="breadcrumb-img">
-                            <img src="assets/images/gallery/breadcrumb-img3.jpg" alt="Portfolio Banner" data-lag="0" data-speed=".8" loading="lazy">
+                            <img src="assets/discussion.png" alt="Portfolio Banner" data-lag="0" data-speed=".8"
+                                loading="lazy">
                         </div>
                     </div>
                 </div>
                 <!-- Breadcrumb Section End -->
 
-                
+
                 <!-- Premium Portfolio Section Start -->
                 <div class="premium-portfolio-section">
                     <div class="container">
@@ -363,7 +398,9 @@
                                 <div class="section-title text-center">
                                     <span class="fade_anim" data-delay=".1">Proven Results</span>
                                     <h2 class="fade_anim" data-delay=".2">Systems That Generate Revenue</h2>
-                                    <p class="fade_anim" data-delay=".3">We don't just deliver services; we deliver measurable business outcomes. Explore how our custom-built frameworks have transformed mid-size businesses.</p>
+                                    <p class="fade_anim" data-delay=".3">We don't just deliver services; we deliver
+                                        measurable business outcomes. Explore how our custom-built frameworks have
+                                        transformed mid-size businesses.</p>
                                 </div>
                             </div>
                         </div>
@@ -371,16 +408,21 @@
                         <!-- Case Study 1 -->
                         <div class="case-study-card fade_anim" data-delay=".2">
                             <div class="cs-image-wrapper">
-                                <img src="assets/images/projects/portfolio-img1.jpg" alt="Sales System Overhaul" loading="lazy">
+                                <img src="assets/images/projects/portfolio-img1.jpg" alt="Sales System Overhaul"
+                                    loading="lazy">
                             </div>
                             <div class="cs-content">
                                 <div class="cs-badge">Sales Growth Consulting</div>
                                 <h3 class="cs-title">Manufacturing Firm Revenue Turnaround</h3>
-                                <p class="cs-description">A legacy manufacturing company was struggling with a flatlined revenue curve and unpredictable pipeline. They had strong products but relied entirely on founder-led sales.</p>
-                                
+                                <p class="cs-description">A legacy manufacturing company was struggling with a flatlined
+                                    revenue curve and unpredictable pipeline. They had strong products but relied
+                                    entirely on founder-led sales.</p>
+
                                 <div class="cs-details">
                                     <h4>The System Built</h4>
-                                    <p>We conducted a full 6-dimensional pipeline audit, designed a bespoke Sales Playbook, and implemented an intensive 90-day execution framework. We trained their new sales hires to remove dependency on the founder.</p>
+                                    <p>We conducted a full 6-dimensional pipeline audit, designed a bespoke Sales
+                                        Playbook, and implemented an intensive 90-day execution framework. We trained
+                                        their new sales hires to remove dependency on the founder.</p>
                                 </div>
 
                                 <div class="cs-grid">
@@ -403,16 +445,21 @@
                         <!-- Case Study 2 -->
                         <div class="case-study-card reverse fade_anim" data-delay=".2">
                             <div class="cs-image-wrapper">
-                                <img src="assets/images/projects/portfolio-img2.jpg" alt="Digital Marketing Scaling" loading="lazy">
+                                <img src="assets/images/projects/portfolio-img2.jpg" alt="Digital Marketing Scaling"
+                                    loading="lazy">
                             </div>
                             <div class="cs-content">
                                 <div class="cs-badge">Digital Marketing</div>
                                 <h3 class="cs-title">B2B Tech Lead Generation Engine</h3>
-                                <p class="cs-description">A mid-size B2B software provider was burning cash on generic digital ads without capturing high-intent prospects. Their sales team was starved of qualified meetings.</p>
-                                
+                                <p class="cs-description">A mid-size B2B software provider was burning cash on generic
+                                    digital ads without capturing high-intent prospects. Their sales team was starved of
+                                    qualified meetings.</p>
+
                                 <div class="cs-details">
                                     <h4>The System Built</h4>
-                                    <p>We took over their complete digital operation ("Done for You"). We restructured their Meta and LinkedIn Ad funnels, implemented aggressive A/B testing on landing pages, and established a CRM-integrated lead nurturing flow.</p>
+                                    <p>We took over their complete digital operation ("Done for You"). We restructured
+                                        their Meta and LinkedIn Ad funnels, implemented aggressive A/B testing on
+                                        landing pages, and established a CRM-integrated lead nurturing flow.</p>
                                 </div>
 
                                 <div class="cs-grid">
@@ -435,16 +482,21 @@
                         <!-- Case Study 3 -->
                         <div class="case-study-card fade_anim" data-delay=".2">
                             <div class="cs-image-wrapper">
-                                <img src="assets/images/projects/portfolio-img4.jpg" alt="Exhibition Stall Design" loading="lazy">
+                                <img src="assets/images/projects/portfolio-img4.jpg" alt="Exhibition Stall Design"
+                                    loading="lazy">
                             </div>
                             <div class="cs-content">
                                 <div class="cs-badge">Exhibition Presence</div>
                                 <h3 class="cs-title">Dominated the Industry Expo</h3>
-                                <p class="cs-description">An emerging brand was blending into the background at major industry expos, losing footfall and crucial networking opportunities to larger, more established competitors.</p>
-                                
+                                <p class="cs-description">An emerging brand was blending into the background at major
+                                    industry expos, losing footfall and crucial networking opportunities to larger, more
+                                    established competitors.</p>
+
                                 <div class="cs-details">
                                     <h4>The System Built</h4>
-                                    <p>We designed and manufactured a high-impact, custom 3D stall that focused on experiential product interaction. We managed the entire physical build, branding, and lighting installation.</p>
+                                    <p>We designed and manufactured a high-impact, custom 3D stall that focused on
+                                        experiential product interaction. We managed the entire physical build,
+                                        branding, and lighting installation.</p>
                                 </div>
 
                                 <div class="cs-grid">
@@ -469,35 +521,61 @@
                 <!-- Premium Portfolio Section End -->
 
                 <!-- Process Section Start -->
-                <div class="portfolio-process-section" style="padding: 80px 0; background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <div class="portfolio-process-section"
+                    style="padding: 80px 0; background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
                     <div class="container">
                         <div class="row justify-content-center mb-60">
                             <div class="col-lg-8 text-center">
-                                <span class="fade_anim" data-delay=".1" style="color: var(--primary-color1); text-transform: uppercase; letter-spacing: 2px; font-weight: 500; font-size: 14px; margin-bottom: 15px; display: inline-block;">Our Methodology</span>
-                                <h2 class="fade_anim" data-delay=".2" style="font-size: 42px; font-weight: 700; color: #fff; margin-bottom: 20px;">How We Guarantee Outcomes</h2>
-                                <p class="fade_anim" data-delay=".3" style="color: rgba(255,255,255,0.7); font-size: 18px; max-width: 600px; margin: 0 auto;">We don't guess. We follow a strict, data-backed approach to turn your growth potential into predictable revenue.</p>
+                                <span class="fade_anim" data-delay=".1"
+                                    style="color: var(--primary-color1); text-transform: uppercase; letter-spacing: 2px; font-weight: 500; font-size: 14px; margin-bottom: 15px; display: inline-block;">Our
+                                    Methodology</span>
+                                <h2 class="fade_anim" data-delay=".2"
+                                    style="font-size: 42px; font-weight: 700; color: #fff; margin-bottom: 20px;">How We
+                                    Guarantee Outcomes</h2>
+                                <p class="fade_anim" data-delay=".3"
+                                    style="color: rgba(255,255,255,0.7); font-size: 18px; max-width: 600px; margin: 0 auto;">
+                                    We don't guess. We follow a strict, data-backed approach to turn your growth
+                                    potential into predictable revenue.</p>
                             </div>
                         </div>
                         <div class="row gy-4 justify-content-center">
                             <div class="col-lg-4 col-md-6 fade_anim" data-delay=".2">
-                                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 40px; height: 100%; transition: transform 0.3s ease;">
-                                    <h1 style="font-size: 60px; color: rgba(var(--primary-color1-opc), 0.2); margin-bottom: 20px; font-weight: 800; font-family: var(--font-archivo);">01</h1>
-                                    <h3 style="color: #fff; font-size: 24px; margin-bottom: 15px; font-weight: 600;">Diagnose & Audit</h3>
-                                    <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">We analyze your current sales pipeline, digital footprint, and brand positioning to identify exactly where you are losing revenue and opportunities.</p>
+                                <div
+                                    style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 40px; height: 100%; transition: transform 0.3s ease;">
+                                    <h1
+                                        style="font-size: 60px; color: rgba(var(--primary-color1-opc), 0.2); margin-bottom: 20px; font-weight: 800; font-family: var(--font-archivo);">
+                                        01</h1>
+                                    <h3 style="color: #fff; font-size: 24px; margin-bottom: 15px; font-weight: 600;">
+                                        Diagnose & Audit</h3>
+                                    <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">We analyze
+                                        your current sales pipeline, digital footprint, and brand positioning to
+                                        identify exactly where you are losing revenue and opportunities.</p>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 fade_anim" data-delay=".3">
-                                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 40px; height: 100%; transition: transform 0.3s ease;">
-                                    <h1 style="font-size: 60px; color: rgba(var(--primary-color1-opc), 0.2); margin-bottom: 20px; font-weight: 800; font-family: var(--font-archivo);">02</h1>
-                                    <h3 style="color: #fff; font-size: 24px; margin-bottom: 15px; font-weight: 600;">Build The System</h3>
-                                    <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">We create a custom playbook, launch targeted digital campaigns, and design your physical/digital brand assets. No templates, just pure strategy.</p>
+                                <div
+                                    style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 40px; height: 100%; transition: transform 0.3s ease;">
+                                    <h1
+                                        style="font-size: 60px; color: rgba(var(--primary-color1-opc), 0.2); margin-bottom: 20px; font-weight: 800; font-family: var(--font-archivo);">
+                                        02</h1>
+                                    <h3 style="color: #fff; font-size: 24px; margin-bottom: 15px; font-weight: 600;">
+                                        Build The System</h3>
+                                    <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">We create a
+                                        custom playbook, launch targeted digital campaigns, and design your
+                                        physical/digital brand assets. No templates, just pure strategy.</p>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 fade_anim" data-delay=".4">
-                                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(var(--primary-color1-opc), 0.3); border-radius: 24px; padding: 40px; height: 100%; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(var(--primary-color1-opc), 0.1);">
-                                    <h1 style="font-size: 60px; color: var(--primary-color1); margin-bottom: 20px; font-weight: 800; font-family: var(--font-archivo);">03</h1>
-                                    <h3 style="color: #fff; font-size: 24px; margin-bottom: 15px; font-weight: 600;">Execute & Scale</h3>
-                                    <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">We run the systems, train your team, optimize the ads, and manage the processes. You focus on closing deals; we focus on filling the pipeline.</p>
+                                <div
+                                    style="background: rgba(255,255,255,0.03); border: 1px solid rgba(var(--primary-color1-opc), 0.3); border-radius: 24px; padding: 40px; height: 100%; transition: transform 0.3s ease; box-shadow: 0 10px 30px rgba(var(--primary-color1-opc), 0.1);">
+                                    <h1
+                                        style="font-size: 60px; color: var(--primary-color1); margin-bottom: 20px; font-weight: 800; font-family: var(--font-archivo);">
+                                        03</h1>
+                                    <h3 style="color: #fff; font-size: 24px; margin-bottom: 15px; font-weight: 600;">
+                                        Execute & Scale</h3>
+                                    <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0;">We run the
+                                        systems, train your team, optimize the ads, and manage the processes. You focus
+                                        on closing deals; we focus on filling the pipeline.</p>
                                 </div>
                             </div>
                         </div>
@@ -506,12 +584,22 @@
                 <!-- Process Section End -->
 
                 <!-- CTA Section Start -->
-                <div class="portfolio-cta-section" style="padding: 100px 0; text-align: center; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: var(--primary-color1); opacity: 0.15; filter: blur(80px); z-radius: 50%; z-index: -1;"></div>
+                <div class="portfolio-cta-section"
+                    style="padding: 100px 0; text-align: center; position: relative; overflow: hidden;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: var(--primary-color1); opacity: 0.15; filter: blur(80px); z-radius: 50%; z-index: -1;">
+                    </div>
                     <div class="container">
-                        <h2 class="fade_anim" data-delay=".1" style="font-size: 56px; font-weight: 800; color: #fff; margin-bottom: 20px; line-height: 1.2;">Ready to Become Our Next <span style="color: var(--primary-color1);">Success Story?</span></h2>
-                        <p class="fade_anim" data-delay=".2" style="font-size: 20px; color: rgba(255,255,255,0.7); max-width: 650px; margin: 0 auto 40px;">Stop losing revenue to poor systems. Let’s build an infrastructure that scales your business consistently.</p>
-                        <a href="contact.html" class="primary-btn1 fade_anim" data-delay=".3" style="padding: 18px 45px; border-radius: 100px; font-size: 16px;">
+                        <h2 class="fade_anim" data-delay=".1"
+                            style="font-size: 56px; font-weight: 800; color: #fff; margin-bottom: 20px; line-height: 1.2;">
+                            Ready to Become Our Next <span style="color: var(--primary-color1);">Success Story?</span>
+                        </h2>
+                        <p class="fade_anim" data-delay=".2"
+                            style="font-size: 20px; color: rgba(255,255,255,0.7); max-width: 650px; margin: 0 auto 40px;">
+                            Stop losing revenue to poor systems. Let’s build an infrastructure that scales your business
+                            consistently.</p>
+                        <a href="contact.html" class="primary-btn1 fade_anim" data-delay=".3"
+                            style="padding: 18px 45px; border-radius: 100px; font-size: 16px;">
                             <span>Book a Growth Consultation</span>
                             <span>Book a Growth Consultation</span>
                         </a>
@@ -537,11 +625,14 @@
                                     and stronger brand presence.
                                 </p>
                                 <ul class="social-list">
-                                    <li><a href="https://www.facebook.com/share/1Cor5ogyum/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                    <li><a href="https://www.facebook.com/share/1Cor5ogyum/?mibextid=wwXIfr"
+                                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
                                                 class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/revvkraft-solutions/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                                    <li><a href="https://www.linkedin.com/company/revvkraft-solutions/" target="_blank"
+                                            rel="noopener noreferrer" aria-label="LinkedIn"><i
                                                 class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://www.instagram.com/revvkraft?igsh=MTQ1bXppM3doMXpqMA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                                    <li><a href="https://www.instagram.com/revvkraft?igsh=MTQ1bXppM3doMXpqMA%3D%3D&utm_source=qr"
+                                            target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
                                                 class="fa-brands fa-instagram"></i></a></li>
                                 </ul>
                             </div>
@@ -561,7 +652,8 @@
                                 <h3 class="widget-title">Contact Info</h3>
                                 <ul class="contact-list">
                                     <li>Pune, Maharashtra, India</li>
-                                    <li><a href="mailto:revvkraftsolutions@gmail.com">revvkraftsolutions@gmail.com</a></li>
+                                    <li><a href="mailto:revvkraftsolutions@gmail.com">revvkraftsolutions@gmail.com</a>
+                                    </li>
                                     <li><a href="tel:9272449658">9272449658</a></li>
                                 </ul>
                             </div>
@@ -610,42 +702,53 @@
     <script src="assets/js/custom.js"></script>
 
 
-<!-- Floating Call Button -->
-<style>
-    .floating-call-btn {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background-color: var(--primary-color1, #ff4a17);
-        color: #fff;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        z-index: 9999;
-        transition: all 0.3s ease;
-        animation: pulse-ring 2s infinite;
-    }
-    .floating-call-btn i {
-        color: #fff;
-    }
-    .floating-call-btn:hover {
-        transform: translateY(-5px);
-        color: #fff;
-    }
-    @keyframes pulse-ring {
-        0% { box-shadow: 0 0 0 0 rgba(255, 74, 23, 0.7); }
-        70% { box-shadow: 0 0 0 15px rgba(255, 74, 23, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(255, 74, 23, 0); }
-    }
-</style>
-<a href="tel:9272449658" class="floating-call-btn" aria-label="Call Us">
-    <i class="fa-solid fa-phone"></i>
-</a>
+    <!-- Floating Call Button -->
+    <style>
+        .floating-call-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--primary-color1, #ff4a17);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            animation: pulse-ring 2s infinite;
+        }
+
+        .floating-call-btn i {
+            color: #fff;
+        }
+
+        .floating-call-btn:hover {
+            transform: translateY(-5px);
+            color: #fff;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 74, 23, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 74, 23, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 74, 23, 0);
+            }
+        }
+    </style>
+    <a href="tel:9272449658" class="floating-call-btn" aria-label="Call Us">
+        <i class="fa-solid fa-phone"></i>
+    </a>
 
 </body>
 
