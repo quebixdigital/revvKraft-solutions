@@ -52,6 +52,10 @@
             margin-top: 15px !important;
             padding-top: 12px !important;
             border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+            display: flex !important;
+            justify-content: flex-start !important;
+            align-items: center !important;
+            gap: 0 !important;
         }
 
         .home1-testimonial-section .testimonial-content svg {
@@ -60,14 +64,52 @@
             height: 32px !important;
         }
 
-        .home1-testimonial-slider .swiper-slide {
-            height: auto !important;
-            display: flex !important;
-            align-items: flex-start !important;
+        .home1-testimonial-section .author-avatar-initials {
+            width: 50px !important;
+            height: 50px !important;
+            min-width: 50px !important;
+            min-height: 50px !important;
+            border-radius: 50% !important;
+            background: linear-gradient(135deg, #C2EE10 0%, #10b981 100%) !important;
+            color: #0b0f19 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-weight: 700 !important;
+            font-size: 15px !important;
+            margin-right: 14px !important;
+            box-shadow: 0 4px 10px rgba(194, 238, 16, 0.15) !important;
+            flex-shrink: 0 !important;
         }
 
-        .home1-testimonial-slider .swiper-wrapper {
-            align-items: flex-start !important;
+        .home1-testimonial-section .author-area {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            width: 100% !important;
+            gap: 0 !important;
+        }
+
+        .home1-testimonial-section .author-content {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 2px !important;
+            padding-left: 0 !important;
+        }
+
+        .home1-testimonial-section .author-content h3 {
+            font-size: 17px !important;
+            font-weight: 700 !important;
+            margin: 0 !important;
+            color: #ffffff !important;
+            line-height: 1.2 !important;
+        }
+
+        .home1-testimonial-section .author-content span {
+            font-size: 13px !important;
+            color: rgba(255, 255, 255, 0.6) !important;
+            font-weight: 500 !important;
+            line-height: 1.2 !important;
         }
 
         /* Redesigned Premium Services Section Styles */
@@ -440,6 +482,45 @@
             transform: scale(1.05);
         }
     </style>
+
+<style>
+    .partner-text {
+        font-size: 26px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.3);
+        margin: 0 50px;
+        font-family: var(--font-spaceGrotesk);
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    .partner-text:hover {
+        color: var(--primary-color1);
+        text-shadow: 0 0 10px rgba(255, 74, 23, 0.3);
+    }
+    .author-avatar-initials {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary-color1), #ff7a53);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 16px;
+        margin-right: 15px;
+        box-shadow: 0 4px 10px rgba(255, 74, 23, 0.2);
+    }
+    .testimonial-company {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--primary-color1);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+</style>
 </head>
 
 <body class="tt-magic-cursor dark">
@@ -497,7 +578,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <a href="mailto:hello@revvkraft.com">hello@revvkraft.com</a>
+                        <a href="mailto:revvkraftsolutions@gmail.com">revvkraftsolutions@gmail.com</a>
                     </li>
                     <li class="single-contact">
                         <div class="icon">
@@ -508,7 +589,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <a href="tel:+912012345678">+91 20 1234 5678</a>
+                        <a href="tel:9272449658">9272449658</a>
                     </li>
                 </ul>
             </div>
@@ -661,7 +742,7 @@
                                         </div>
                                         <div class="content">
                                             <span>Send Mail Us</span>
-                                            <a href="mailto:hello@revvkraft.com">hello@revvkraft.com</a>
+                                            <a href="mailto:revvkraftsolutions@gmail.com">revvkraftsolutions@gmail.com</a>
                                         </div>
                                     </div>
                                 </div>
@@ -681,32 +762,20 @@
                     <div class="partner-wrap">
                         <div class="marquee">
                             <div class="marquee__group">
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-01-light.png" alt="Partner 01"
-                                        loading="lazy"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-02-light.png" alt="Partner 02"
-                                        loading="lazy"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-03-light.png" alt="Partner 03"
-                                        loading="lazy"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-04-light.png" alt="Partner 04"
-                                        loading="lazy"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-05-light.png" alt="Partner 05"
-                                        loading="lazy"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-06-light.png" alt="Partner 06"
-                                        loading="lazy"></a>
+                                <span class="partner-text">DreamLight Electrical</span>
+                                <span class="partner-text">HireUrHR Solutions</span>
+                                <span class="partner-text">Rahul Engineering</span>
+                                <span class="partner-text">SD Enterprises</span>
+                                <span class="partner-text">BHEL</span>
+                                <span class="partner-text">Unifab Tech</span>
                             </div>
                             <div aria-hidden="true" class="marquee__group">
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-01-light.png" alt="Partner 01"
-                                        loading="lazy"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-02-light.png" alt="Partner 02"
-                                        loading="lazy"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-03-light.png" alt="Partner 03"
-                                        loading="lazy"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-04-light.png" alt="Partner 04"
-                                        loading="lazy"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-05-light.png" alt="Partner 05"
-                                        loading="lazy"></a>
-                                <a href="javascript:void(0)"><img src="assets/images/gallery/partner-06-light.png" alt="Partner 06"
-                                        loading="lazy"></a>
+                                <span class="partner-text">DreamLight Electrical</span>
+                                <span class="partner-text">HireUrHR Solutions</span>
+                                <span class="partner-text">Rahul Engineering</span>
+                                <span class="partner-text">SD Enterprises</span>
+                                <span class="partner-text">BHEL</span>
+                                <span class="partner-text">Unifab Tech</span>
                             </div>
                         </div>
                     </div>
@@ -759,7 +828,7 @@
                                         d="M12.063 9.74408C11.2173 9.02072 10.359 8.58256 9.52363 9.30482L9.02482 9.74135C8.65987 10.0582 7.98131 11.5388 5.35778 8.52082C2.73479 5.50666 4.29569 5.03735 4.66119 4.7232L5.16273 4.28613C5.99372 3.56223 5.68012 2.65093 5.08078 1.71286L4.7191 1.14466C4.11704 0.208782 3.46143 -0.405852 2.62826 0.316958L2.17807 0.710323C1.80984 0.978577 0.780529 1.85054 0.530851 3.50705C0.230363 5.49464 1.17827 7.77069 3.34997 10.268C5.51895 12.7664 7.64258 14.0214 9.65421 13.9995C11.326 13.9815 12.3357 13.0844 12.6514 12.7582L13.1033 12.3643C13.9342 11.6421 13.418 10.9067 12.5717 10.1817L12.063 9.74408Z" />
                                 </g>
                             </svg>
-                            <a href="tel:+912012345678">+91 20 1234 5678</a>
+                            <a href="tel:9272449658">9272449658</a>
                         </div>
                     </div>
                 </div>
@@ -787,7 +856,7 @@
                                 <div class="service-number">01</div>
                                 <div class="card-shape"></div>
                                 <div class="service-img">
-                                    <img src="assets/images/services/web_development_service_1778845189087.png" alt="Sales Growth Consulting" loading="lazy">
+                                    <img src="assets/images/services/sales-system-service-1.jpg" alt="Sales Growth Consulting" loading="lazy">
                                 </div>
                                 <div class="service-content">
                                     <div class="service-badge">Strategy</div>
@@ -808,7 +877,7 @@
                                 <div class="service-number">02</div>
                                 <div class="card-shape"></div>
                                 <div class="service-img">
-                                    <img src="assets/images/services/digital_marketing_service_1778845210748.png" alt="Digital Marketing" loading="lazy">
+                                    <img src="assets/images/services/digital-marketing-service.jpg" alt="Digital Marketing" loading="lazy">
                                 </div>
                                 <div class="service-content">
                                     <div class="service-badge">Growth</div>
@@ -829,7 +898,7 @@
                                 <div class="service-number">03</div>
                                 <div class="card-shape"></div>
                                 <div class="service-img">
-                                    <img src="assets/images/services/branding_service_1778845246413.png" alt="Exhibition Stall Design" loading="lazy">
+                                    <img src="assets/images/services/branding-service.jpg" alt="Exhibition Stall Design" loading="lazy">
                                 </div>
                                 <div class="service-content">
                                     <div class="service-badge">Visibility</div>
@@ -986,175 +1055,144 @@
                         </div>
                     </div>
                     <div class="testimonial-slider-area mb-45">
+                        
                         <div class="swiper home1-testimonial-slider">
                             <div class="swiper-wrapper">
+                                <!-- Testimonial 1 -->
                                 <div class="swiper-slide">
                                     <div class="testimonial-card">
                                         <div class="testimonial-content">
-                                            <svg width="40" height="40" viewBox="0 0 40 40"
-                                                xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                                                 <g>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
                                                 </g>
                                             </svg>
-                                            <p>What impressed me most about RevvKraft was their understanding of how
-                                                companies
-                                                grow. We saw a <span>200% increase</span> in sign-ups within just a few
-                                                months.</p>
+                                            <p>“Revvkraft helped us organize our sales process in a much better way. Follow-ups and client handling became smoother and more systematic. Their approach was practical and easy for our team to implement.”</p>
                                         </div>
                                         <div class="logo-and-author-area">
-                                            <div class="logo">
-                                                <img src="assets/images/logos/testimonial-company-logo1-light.png"
-                                                    alt="Mortar Logo" loading="lazy">
-                                            </div>
                                             <div class="author-area">
-                                                <div class="author-img">
-                                                    <img src="assets/images/gallery/testimonial-author-img1.png"
-                                                        alt="Mr. Oliver Liam" loading="lazy">
-                                                </div>
-                                                <div class="author-content">
-                                                    <h3>Mr. Oliver Liam</h3>
-                                                    <span>Founder of Mortar</span>
+                                                <div class="author-avatar-initials">NM</div>
+                                                <div class="author-content" style="padding-left: 0;">
+                                                    <h3>Nishant Mulay</h3>
+                                                    <span>DreamLight Electrical Engineer</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Testimonial 2 -->
                                 <div class="swiper-slide">
                                     <div class="testimonial-card">
                                         <div class="testimonial-content">
-                                            <svg width="40" height="40" viewBox="0 0 40 40"
-                                                xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                                                 <g>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
                                                 </g>
                                             </svg>
-                                            <p>RevvKraft has been <span>instrumental</span> in every stage of our
-                                                growth—from
-                                                branding to product design to launch campaigns.</p>
+                                            <p>“Working with Revvkraft helped us improve our sales structure and workflow. The process became more clear and organized for the team. We also saw positive growth in our business operations.”</p>
                                         </div>
                                         <div class="logo-and-author-area">
-                                            <div class="logo">
-                                                <img src="assets/images/logos/testimonial-company-logo2-light.png"
-                                                    alt="OrbitFlow Logo" loading="lazy">
-                                            </div>
                                             <div class="author-area">
-                                                <div class="author-img">
-                                                    <img src="assets/images/gallery/testimonial-author-img2.png"
-                                                        alt="Jason Lee" loading="lazy">
-                                                </div>
-                                                <div class="author-content">
-                                                    <h3>Jason Lee</h3>
-                                                    <span>Co-Founder of OrbitFlow</span>
+                                                <div class="author-avatar-initials">DB</div>
+                                                <div class="author-content" style="padding-left: 0;">
+                                                    <h3>Dipti Bhandari</h3>
+                                                    <span>HireUrHR Solutions</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Testimonial 3 -->
                                 <div class="swiper-slide">
                                     <div class="testimonial-card">
                                         <div class="testimonial-content">
-                                            <svg width="40" height="40" viewBox="0 0 40 40"
-                                                xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                                                 <g>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
                                                 </g>
                                             </svg>
-                                            <p>RevvKraft completely transformed the way we approached our sales process.
-                                                They didn’t
-                                                just deliver a product—they guided us through <span>strategy, design,
-                                                    and development.</span></p>
+                                            <p>“Earlier, most of the sales work depended on one person only. Revvkraft helped us build a proper system for the entire team. Today, the team works more efficiently and with better coordination.”</p>
                                         </div>
                                         <div class="logo-and-author-area">
-                                            <div class="logo">
-                                                <img src="assets/images/logos/testimonial-company-logo3-light.png"
-                                                    alt="BrightNest Logo" loading="lazy">
-                                            </div>
                                             <div class="author-area">
-                                                <div class="author-img">
-                                                    <img src="assets/images/gallery/testimonial-author-img3.png"
-                                                        alt="Ava T." loading="lazy">
-                                                </div>
-                                                <div class="author-content">
-                                                    <h3>Ava T.</h3>
-                                                    <span>Founder of BrightNest</span>
+                                                <div class="author-avatar-initials">RK</div>
+                                                <div class="author-content" style="padding-left: 0;">
+                                                    <h3>Rohit Kulkarni</h3>
+                                                    <span>Rahul Engineering</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                <!-- Testimonial 4 -->
                                 <div class="swiper-slide">
                                     <div class="testimonial-card">
                                         <div class="testimonial-content">
-                                            <svg width="40" height="40" viewBox="0 0 40 40"
-                                                xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                                                 <g>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
                                                 </g>
                                             </svg>
-                                            <p>RevvKraft has played a <span>crucial role</span> at every step of our
-                                                journey
-                                                — from shaping our brand and designing products to launch campaigns.</p>
+                                            <p>“Revvkraft helped us improve our sales process in a simple and practical manner. Their guidance made our workflow more structured and manageable. The overall coordination and follow-up process also improved.”</p>
                                         </div>
                                         <div class="logo-and-author-area">
-                                            <div class="logo">
-                                                <img src="assets/images/logos/testimonial-company-logo4-light.png"
-                                                    alt="Axleo Logo" loading="lazy">
-                                            </div>
                                             <div class="author-area">
-                                                <div class="author-img">
-                                                    <img src="assets/images/gallery/testimonial-author-img4.png"
-                                                        alt="Ayesha Rahman" loading="lazy">
-                                                </div>
-                                                <div class="author-content">
-                                                    <h3>Ayesha Rahman</h3>
-                                                    <span>Founder of Axleo</span>
+                                                <div class="author-avatar-initials">PD</div>
+                                                <div class="author-content" style="padding-left: 0;">
+                                                    <h3>Prashant Dixit</h3>
+                                                    <span>SD Enterprises</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                <!-- Testimonial 5 -->
                                 <div class="swiper-slide">
                                     <div class="testimonial-card">
                                         <div class="testimonial-content">
-                                            <svg width="40" height="40" viewBox="0 0 40 40"
-                                                xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                                                 <g>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
                                                 </g>
                                             </svg>
-                                            <p>What stood out to me about RevvKraft was their deep insight into business
-                                                growth. In just a few months, we experienced a <span>200%
-                                                    increase</span> in sign-ups.</p>
+                                            <p>“Revvkraft supported us in finding reliable and efficient vendors. Their industry understanding helped simplify the selection process. The coordination and execution were handled professionally throughout.”</p>
                                         </div>
                                         <div class="logo-and-author-area">
-                                            <div class="logo">
-                                                <img src="assets/images/logos/testimonial-company-logo5-light.png"
-                                                    alt="ScaleHive Logo" loading="lazy">
-                                            </div>
                                             <div class="author-area">
-                                                <div class="author-img">
-                                                    <img src="assets/images/gallery/testimonial-author-img5.png"
-                                                        alt="Mr. Daniel K." loading="lazy">
-                                                </div>
-                                                <div class="author-content">
-                                                    <h3>Mr. Daniel K.</h3>
-                                                    <span>Founder of ScaleHive</span>
+                                                <div class="author-avatar-initials">MS</div>
+                                                <div class="author-content" style="padding-left: 0;">
+                                                    <h3>Mr. Subramanyam</h3>
+                                                    <span>BHEL</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                <!-- Testimonial 6 -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-content">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.5211 5V18.5849H27.6308C30.7438 18.5849 33.6347 20.6614 33.8811 23.8592C33.9714 25.0297 33.936 26.1866 33.6439 27.0799C32.7022 30.92 29.4064 31.3207 29.4064 31.3207V35C29.4064 35 40 33.56 40 22.04V5L23.5211 5ZM1 5L1 18.5849H5.10972C8.22268 18.5849 11.1135 20.6614 11.36 23.8592C11.4502 25.0297 11.4149 26.1866 11.1228 27.0799C10.1811 30.92 6.88532 31.3207 6.88532 31.3207V35C6.88532 35 17.4789 33.56 17.4789 22.04V5L1 5Z" />
+                                                </g>
+                                            </svg>
+                                            <p>“Revvkraft helped us improve our digital marketing efforts and visibility. Their team understands industrial businesses and works accordingly. The overall experience working with them has been very positive.”</p>
+                                        </div>
+                                        <div class="logo-and-author-area">
+                                            <div class="author-area">
+                                                <div class="author-avatar-initials">MI</div>
+                                                <div class="author-content" style="padding-left: 0;">
+                                                    <h3>Mr. Inamdar</h3>
+                                                    <span>Unifab Tech</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                     <div class="slider-btn-grp fade_anim" data-delay=".3" data-ease="bounce">
                         <div class="slider-btn testimonial-slider-prev">
@@ -1194,111 +1232,7 @@
             </div>
             <!-- home1 Testimonial Section End-->
 
-            <!-- home1 Team Section Start-->
-            <div class="home1-team-section" style="margin-bottom: 20px;">
-                <div class="container">
-                    <div class="row justify-content-center mb-60">
-                        <div class="col-lg-6">
-                            <div class="section-title text-center white">
-                                <h2 class="text-anim" data-delay="0.3">Creative Minds</h2>
-                                <p class="fade_anim" data-delay=".3">We helped us focus on what mattered, and their
-                                    ideas consistently pushed our business forward.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gx-xl-4 gx-md-3 gy-5 mb-70">
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-lag="0.2">
-                            <div class="team-card">
-                                <div class="team-img">
-                                    <img src="assets/images/gallery/team-img1.png" alt="Mr. Jorche Milton - CEO"
-                                        loading="lazy">
-                                    <div class="social-area">
-                                        <ul class="social-list">
-                                            <li><a href="https://www.linkedin.com/company/revvkraft-solutions/" target="_blank" rel="noopener noreferrer"><i
-                                                        class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li><a href="https://www.facebook.com/share/1Cor5ogyum/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i
-                                                        class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <h3><a href="javascript:void(0)">Mr. Jorche Milton</a></h3>
-                                    <span>CEO, Founder</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-lag="0.4">
-                            <div class="team-card">
-                                <div class="team-img">
-                                    <img src="assets/images/gallery/team-img2.png"
-                                        alt="Samuel Henry - Software Engineer" loading="lazy">
-                                    <div class="social-area">
-                                        <ul class="social-list">
-                                            <li><a href="https://www.linkedin.com/company/revvkraft-solutions/" target="_blank" rel="noopener noreferrer"><i
-                                                        class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li><a href="https://www.facebook.com/share/1Cor5ogyum/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i
-                                                        class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <h3><a href="javascript:void(0)">Samuel Henry</a></h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-lag="0.6">
-                            <div class="team-card">
-                                <div class="team-img">
-                                    <img src="assets/images/gallery/team-img3.png" alt="Oliver Liam - CMO"
-                                        loading="lazy">
-                                    <div class="social-area">
-                                        <ul class="social-list">
-                                            <li><a href="https://www.linkedin.com/company/revvkraft-solutions/" target="_blank" rel="noopener noreferrer"><i
-                                                        class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li><a href="https://www.facebook.com/share/1Cor5ogyum/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i
-                                                        class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <h3><a href="javascript:void(0)">Oliver Liam</a></h3>
-                                    <span>Chief Marketing Officer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6" data-lag="0.7">
-                            <div class="team-card">
-                                <div class="team-img">
-                                    <img src="assets/images/gallery/team-img4.png"
-                                        alt="Alexander Benjamin - Head of Design" loading="lazy">
-                                    <div class="social-area">
-                                        <ul class="social-list">
-                                            <li><a href="https://www.linkedin.com/company/revvkraft-solutions/" target="_blank" rel="noopener noreferrer"><i
-                                                        class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li><a href="https://www.facebook.com/share/1Cor5ogyum/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i
-                                                        class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-content">
-                                    <h3><a href="javascript:void(0)">Alexander Benjamin</a></h3>
-                                    <span>Head of Product Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- home1 Team Section End-->
+            
 
             <!-- home1 Contact Section Start-->
             <div class="home1-contact-section" id="contact-form-section">
@@ -1317,7 +1251,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="contact-form-card fade_anim" data-delay=".4">
-                                <form action="#contact" method="post">
+                                <form action="https://formsubmit.co/revvkraftsolutions@gmail.com" method="POST">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -1397,8 +1331,8 @@
                                 <h3 class="widget-title">Contact Info</h3>
                                 <ul class="contact-list">
                                     <li>Pune, Maharashtra, India</li>
-                                    <li><a href="mailto:hello@revvkraft.com">hello@revvkraft.com</a></li>
-                                    <li><a href="tel:+912012345678">+91 20 1234 5678</a></li>
+                                    <li><a href="mailto:revvkraftsolutions@gmail.com">revvkraftsolutions@gmail.com</a></li>
+                                    <li><a href="tel:9272449658">9272449658</a></li>
                                 </ul>
                             </div>
 
@@ -1520,6 +1454,44 @@
         integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
         data-cf-beacon='{"version":"2024.11.0","token":"70834e4b23964a2eaf7cf4ec0e5e9a84","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
         crossorigin="anonymous"></script>
+
+<!-- Floating Call Button -->
+<style>
+    .floating-call-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: var(--primary-color1, #ff4a17);
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        z-index: 9999;
+        transition: all 0.3s ease;
+        animation: pulse-ring 2s infinite;
+    }
+    .floating-call-btn i {
+        color: #fff;
+    }
+    .floating-call-btn:hover {
+        transform: translateY(-5px);
+        color: #fff;
+    }
+    @keyframes pulse-ring {
+        0% { box-shadow: 0 0 0 0 rgba(255, 74, 23, 0.7); }
+        70% { box-shadow: 0 0 0 15px rgba(255, 74, 23, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 74, 23, 0); }
+    }
+</style>
+<a href="tel:9272449658" class="floating-call-btn" aria-label="Call Us">
+    <i class="fa-solid fa-phone"></i>
+</a>
+
 </body>
 
 </html>

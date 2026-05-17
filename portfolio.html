@@ -265,7 +265,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <a href="mailto:hello@revvkraft.com">hello@revvkraft.com</a>
+                        <a href="mailto:revvkraftsolutions@gmail.com">revvkraftsolutions@gmail.com</a>
                     </li>
                     <li class="single-contact">
                         <div class="icon">
@@ -276,7 +276,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <a href="tel:+912012345678">+91 20 1234 5678</a>
+                        <a href="tel:9272449658">9272449658</a>
                     </li>
                 </ul>
             </div>
@@ -561,8 +561,8 @@
                                 <h3 class="widget-title">Contact Info</h3>
                                 <ul class="contact-list">
                                     <li>Pune, Maharashtra, India</li>
-                                    <li><a href="mailto:hello@revvkraft.com">hello@revvkraft.com</a></li>
-                                    <li><a href="tel:+912012345678">+91 20 1234 5678</a></li>
+                                    <li><a href="mailto:revvkraftsolutions@gmail.com">revvkraftsolutions@gmail.com</a></li>
+                                    <li><a href="tel:9272449658">9272449658</a></li>
                                 </ul>
                             </div>
 
@@ -608,6 +608,44 @@
     <!-- Custom JS -->
     <script src="assets/js/sidebar.js"></script>
     <script src="assets/js/custom.js"></script>
+
+
+<!-- Floating Call Button -->
+<style>
+    .floating-call-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: var(--primary-color1, #ff4a17);
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        z-index: 9999;
+        transition: all 0.3s ease;
+        animation: pulse-ring 2s infinite;
+    }
+    .floating-call-btn i {
+        color: #fff;
+    }
+    .floating-call-btn:hover {
+        transform: translateY(-5px);
+        color: #fff;
+    }
+    @keyframes pulse-ring {
+        0% { box-shadow: 0 0 0 0 rgba(255, 74, 23, 0.7); }
+        70% { box-shadow: 0 0 0 15px rgba(255, 74, 23, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 74, 23, 0); }
+    }
+</style>
+<a href="tel:9272449658" class="floating-call-btn" aria-label="Call Us">
+    <i class="fa-solid fa-phone"></i>
+</a>
 
 </body>
 

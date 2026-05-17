@@ -86,7 +86,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <a href="mailto:hello@revvkraft.com">hello@revvkraft.com</a>
+                        <a href="mailto:revvkraftsolutions@gmail.com">revvkraftsolutions@gmail.com</a>
                     </li>
                     <li class="single-contact">
                         <div class="icon">
@@ -97,7 +97,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <a href="tel:+912012345678">+91 20 1234 5678</a>
+                        <a href="tel:9272449658">9272449658</a>
                     </li>
                 </ul>
             </div>
@@ -185,32 +185,35 @@
                                 <svg class="divider" height="6" viewBox="0 0 696 6" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM691 3.5L696 5.88675V0.113249L691 2.5V3.5ZM4.5 3.5H691.5V2.5H4.5V3.5Z"/>
                                 </svg>
-                                <form>
+                                <form id="contact-form" action="https://formsubmit.co/revvkraftsolutions@gmail.com" method="POST">
+                                    <!-- Disable CAPTCHA for seamless background submit -->
+                                    <input type="hidden" name="_captcha" value="false">
                                     <div class="row g-4 mb-70">
                                         <div class="col-md-4">
                                             <div class="form-inner">
                                                 <label>Full Name</label>
-                                                <input type="text" placeholder="John Doe">
+                                                <input type="text" name="name" placeholder="John Doe" required>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-inner">
                                                 <label>Gmail ID</label>
-                                                <input type="email" placeholder="example@gmail.com">
+                                                <input type="email" name="email" placeholder="example@gmail.com" required>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-inner">
                                                 <label>Phone No</label>
-                                                <input type="text" placeholder="+123 456 7890">
+                                                <input type="text" name="phone" placeholder="+91 92724 49658" required>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-center">
-                                        <button class="primary-btn1" type="submit">
+                                    <div class="text-center" style="position: relative;">
+                                        <button class="primary-btn1" type="submit" id="submit-btn">
                                             <span>Submit Enquiry</span>
                                             <span>Submit Enquiry</span>
                                         </button>
+                                        <div id="form-msg" style="margin-top: 25px; min-height: 24px; font-weight: 600; font-size: 16px; transition: all 0.3s ease;"></div>
                                     </div>
                                 </form>
                             </div>
@@ -270,8 +273,8 @@
                                 <h3 class="widget-title">Contact Info</h3>
                                 <ul class="contact-list">
                                     <li>Pune, Maharashtra, India</li>
-                                    <li><a href="mailto:hello@revvkraft.com">hello@revvkraft.com</a></li>
-                                    <li><a href="tel:+912012345678">+91 20 1234 5678</a></li>
+                                    <li><a href="mailto:revvkraftsolutions@gmail.com">revvkraftsolutions@gmail.com</a></li>
+                                    <li><a href="tel:9272449658">9272449658</a></li>
                                 </ul>
                             </div>
 
@@ -395,12 +398,120 @@
 
           if (icon) icon.addEventListener('click', toggle);
         }
-      });
+    });
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contact-form");
+        const submitBtn = document.getElementById("submit-btn");
+        const formMsg = document.getElementById("form-msg");
+
+        if (form) {
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                // Save original button content
+                const origContent = submitBtn.innerHTML;
+                
+                // Update button state to sending
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = "0.7";
+                submitBtn.innerHTML = "<span>Sending...</span><span>Sending...</span>";
+
+                // Clear previous message
+                formMsg.textContent = "";
+                formMsg.style.color = "transparent";
+
+                const formData = new FormData(form);
+
+                fetch("https://formsubmit.co/ajax/revvkraftsolutions@gmail.com", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error("Network response was not ok.");
+                    }
+                })
+                .then(data => {
+                    // Success handling
+                    form.reset();
+                    formMsg.style.color = "#10b981"; // Emerald green
+                    formMsg.textContent = "Message sent successfully!";
+                    
+                    // Restore button state
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = "1";
+                    submitBtn.innerHTML = origContent;
+
+                    // Automatically clear message after 5 seconds
+                    setTimeout(() => {
+                        formMsg.textContent = "";
+                    }, 5000);
+                })
+                .catch(error => {
+                    // Error handling
+                    formMsg.style.color = "#ef4444"; // Red error text
+                    formMsg.textContent = "Oops! Something went wrong. Please try again.";
+                    
+                    // Restore button state
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = "1";
+                    submitBtn.innerHTML = origContent;
+
+                    // Automatically clear message after 5 seconds
+                    setTimeout(() => {
+                        formMsg.textContent = "";
+                    }, 5000);
+                });
+            });
+        }
     });
     </script>
 
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"70834e4b23964a2eaf7cf4ec0e5e9a84","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
         crossorigin="anonymous"></script>
+
+<!-- Floating Call Button -->
+<style>
+    .floating-call-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: var(--primary-color1, #ff4a17);
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        z-index: 9999;
+        transition: all 0.3s ease;
+        animation: pulse-ring 2s infinite;
+    }
+    .floating-call-btn i {
+        color: #fff;
+    }
+    .floating-call-btn:hover {
+        transform: translateY(-5px);
+        color: #fff;
+    }
+    @keyframes pulse-ring {
+        0% { box-shadow: 0 0 0 0 rgba(255, 74, 23, 0.7); }
+        70% { box-shadow: 0 0 0 15px rgba(255, 74, 23, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 74, 23, 0); }
+    }
+</style>
+<a href="tel:9272449658" class="floating-call-btn" aria-label="Call Us">
+    <i class="fa-solid fa-phone"></i>
+</a>
+
 </body>
 
 </html>
