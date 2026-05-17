@@ -42565,17 +42565,25 @@ body.sidebar-open {
   }
 
   .footer-section.one .footer-menu-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    gap: 15px 10px;
     width: 100%;
+    max-width: 320px;
   }
 
   .footer-section.one .footer-menu-list li {
     margin-bottom: 0;
-    flex: 0 0 auto;
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-section.one .footer-menu-list li:nth-child(4),
+  .footer-section.one .footer-menu-list li:nth-child(5) {
+    grid-column: span 3;
   }
 
   .footer-section.one .footer-menu-list a {
