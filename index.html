@@ -29,6 +29,7 @@
     <!--  Style CSS  -->
     <link rel="stylesheet" href="assets/css/root-colors.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css">
     <!-- Title -->
     <title>RevvKraft Solutions - Sales Systems & Digital Growth</title>
     <link rel="icon" href="assets/revvkraft-favicon.png" type="image/png">
@@ -938,7 +939,7 @@
                                 <div class="service-number">03</div>
                                 <div class="card-shape"></div>
                                 <div class="service-img">
-                                    <img src="assets/images/services/branding-service.jpg" alt="Exhibition Stall Design"
+                                    <img src="assets/images/gallery/ChatGPT Image May 20, 2026, 09_53_32 AM.png" alt="Exhibition Stall Design"
                                         loading="lazy">
                                 </div>
                                 <div class="service-content">
@@ -1333,7 +1334,9 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="contact-form-card fade_anim" data-delay=".4">
-                                <form action="https://formsubmit.co/revvkraftsolutions@gmail.com" method="POST">
+                                <form id="home-contact-form" action="https://formsubmit.co/revvkraftsolutions@gmail.com" method="POST">
+                                    <!-- Disable CAPTCHA for seamless background submit -->
+                                    <input type="hidden" name="_captcha" value="false">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -1356,12 +1359,13 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <button type="submit" class="primary-btn1">
+                                            <button type="submit" class="primary-btn1" id="home-submit-btn">
                                                 <span>Send Message</span>
                                                 <span>Send Message</span>
                                             </button>
                                         </div>
                                     </div>
+                                    <div id="home-form-msg" style="margin-top: 25px; min-height: 24px; font-weight: 600; font-size: 16px; transition: all 0.3s ease; text-align: center;"></div>
                                 </form>
                             </div>
                         </div>
@@ -1533,6 +1537,77 @@
                 }
             });
         });
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("home-contact-form");
+        const submitBtn = document.getElementById("home-submit-btn");
+        const formMsg = document.getElementById("home-form-msg");
+
+        if (form) {
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                // Save original button content
+                const origContent = submitBtn.innerHTML;
+                
+                // Update button state to sending
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = "0.7";
+                submitBtn.innerHTML = "<span>Sending...</span><span>Sending...</span>";
+
+                // Clear previous message
+                formMsg.textContent = "";
+                formMsg.style.color = "transparent";
+
+                const formData = new FormData(form);
+
+                fetch("https://formsubmit.co/ajax/revvkraftsolutions@gmail.com", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error("Network response was not ok.");
+                    }
+                })
+                .then(data => {
+                    // Success handling
+                    form.reset();
+                    formMsg.style.color = "#10b981"; // Emerald green
+                    formMsg.textContent = "Message sent successfully!";
+                    
+                    // Restore button state
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = "1";
+                    submitBtn.innerHTML = origContent;
+
+                    // Automatically clear message after 5 seconds
+                    setTimeout(() => {
+                        formMsg.textContent = "";
+                    }, 5000);
+                })
+                .catch(error => {
+                    // Error handling
+                    formMsg.style.color = "#ef4444"; // Red error text
+                    formMsg.textContent = "Oops! Something went wrong. Please try again.";
+                    
+                    // Restore button state
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = "1";
+                    submitBtn.innerHTML = origContent;
+
+                    // Automatically clear message after 5 seconds
+                    setTimeout(() => {
+                        formMsg.textContent = "";
+                    }, 5000);
+                });
+            });
+        }
+    });
     </script>
 
     <script defer
