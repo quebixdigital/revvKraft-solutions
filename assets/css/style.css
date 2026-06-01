@@ -42043,6 +42043,7 @@ body.dark .pricing-plan-page .pricing-plan-tab-area .nav-area {
   align-items: center;
   justify-content: center;
   transition: var(--sb-transition);
+  flex-shrink: 0;
 }
 
 .right-sidebar .single-contact:hover .icon {
